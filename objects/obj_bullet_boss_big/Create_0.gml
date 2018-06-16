@@ -1,2 +1,4 @@
-image_xscale += 50;
-image_yscale += 50;
+/// @desc
+image_xscale = 5;
+image_yscale = 5;
+
