@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "bc33146b-0bfc-407f-bc8e-e416b5410a6b",
+            "Value": {
+                "id": "47e0a572-94b4-4942-b268-1f5419627af6",
+                "resourcePath": "objects\\obj_borders_player\\obj_borders_player.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c2221105-34f3-4ac2-a513-b4202bb7eb2e",
             "Value": {
                 "id": "26eed0a6-deb7-45f5-9a0c-6ac13de72791",

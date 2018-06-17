@@ -3,12 +3,14 @@ x = obj_boss.x;
 y = obj_boss.y;
 
 
-firing_delay--;
 
-if(mode == "Straight")
+firing_delay--;
+ 
+if(last_atk == "Slanted") or (last_atk == "null")
 {
 	if(firing)
 	{
+		direction = 0;
 		if(firing_delay == 0)
 		{
 			Fire90DegreesBig()
@@ -17,15 +19,16 @@ if(mode == "Straight")
 			Fire90DegreesBig()
 			
 			firing_delay = firing_delay_max;
+			last_atk = "Straight";
 		}
 	}
 }
 
-if(mode == "Slanted")
+if(last_atk == "Straight")
 {
-	direction = 45;
 	if(firing)
 	{
+		direction = 45;
 		if(firing_delay == 0)
 		{
 			Fire90DegreesBig()
@@ -34,6 +37,7 @@ if(mode == "Slanted")
 			Fire90DegreesBig()
 			
 			firing_delay = firing_delay_max;
+			last_atk = "Slanted";
 		}
 	}
 }

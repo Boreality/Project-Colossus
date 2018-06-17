@@ -1,13 +1,13 @@
 /// @desc
 firing = true;
 
-mode = "Slanted";
+
 //Straight or Slanted
 
-firing_delay_max = 3 * room_speed;
+firing_delay_max = 2 * room_speed;
 firing_delay = firing_delay_max;
 
-bullet_spd = 1.5;
+bullet_spd = 2;
 
 change_mode = false;
 
