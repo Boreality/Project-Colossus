@@ -13,8 +13,7 @@ image_angle = direction
 if(obj_player.key_fire)
 {
 	firing_delay--;
-	
-		
+	obj_player.walk_spd = 3;
 }
 else
 {
@@ -27,7 +26,13 @@ else
 			image_angle = direction;
 		}
 		firing_delay = firing_delay_max;
+		
 	}
+	else
+	{
+		firing_delay = firing_delay_max;	
+	}
+	obj_player.walk_spd = 5;
 }
 firing_delay = clamp(firing_delay,0,999);
  

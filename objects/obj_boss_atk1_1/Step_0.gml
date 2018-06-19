@@ -5,7 +5,7 @@ y = obj_boss.y;
 
 
 //Goal: Fire 1 bullet while the thing is circling evey 0.5 seconds
-rotation_spd += random_range(0.5,2);
+rotation_spd += (random_range(-0.5,0.5) + choose(-2,2));
 
 
 direction+= rotation_spd;

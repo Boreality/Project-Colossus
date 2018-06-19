@@ -1,2 +1,2 @@
-attack = 1;
+attack = 3;
 active = true;

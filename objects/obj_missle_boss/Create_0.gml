@@ -1,0 +1,2 @@
+/// @desc
+direction = 0;
