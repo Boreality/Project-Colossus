@@ -43,6 +43,36 @@
             "enumb": 0,
             "eventtype": 8,
             "m_owner": "d829f726-0a86-491d-8e88-f486d2b4f9aa"
+        },
+        {
+            "id": "69db1874-2c81-4f86-9793-7a9cc06458c5",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 2,
+            "eventtype": 3,
+            "m_owner": "d829f726-0a86-491d-8e88-f486d2b4f9aa"
+        },
+        {
+            "id": "a650ae73-3f34-47a9-bed3-a96e9eb66c07",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 1,
+            "eventtype": 3,
+            "m_owner": "d829f726-0a86-491d-8e88-f486d2b4f9aa"
+        },
+        {
+            "id": "cb50756c-5f0d-48dd-8bfb-bb3a9fc9d40b",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "d829f726-0a86-491d-8e88-f486d2b4f9aa"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -114,9 +144,51 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "10",
+            "value": "15",
             "varName": "hp",
             "varType": 0
+        },
+        {
+            "id": "fdd5db8b-520c-4d17-9b8f-f5bff68c4ff9",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "iFrame",
+            "varType": 3
+        },
+        {
+            "id": "bcbc983a-163f-4b13-8baa-672d215746d8",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "hp_prev",
+            "varType": 0
+        },
+        {
+            "id": "fcc97b83-7267-49dd-b81a-30559eb603cf",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "flicker",
+            "varType": 3
         }
     ],
     "solid": false,

@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "5765d392-50ad-4142-8478-55c2ae36f7f2",
+            "Value": {
+                "id": "d4299132-365a-49e2-8d06-225c39227458",
+                "resourcePath": "objects\\obj_missle_shadow\\obj_missle_shadow.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "579c5797-3fc1-4403-8853-4a11efad9f2c",
             "Value": {
                 "id": "c9fee226-ea0f-4871-a625-88a50fb78bb7",
@@ -244,6 +252,14 @@
                 "id": "0650ce6a-245e-4cf1-979f-3a35694cbd9a",
                 "resourcePath": "views\\b40dbb31-7abe-42d9-a8c8-55fefbade1b0.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b852d39c-72a6-482c-b3e3-5a5938f75e2d",
+            "Value": {
+                "id": "8bab1c67-8dd5-4d0e-b5a7-fb7cf8ae1dfe",
+                "resourcePath": "sprites\\spr_shadow\\spr_shadow.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

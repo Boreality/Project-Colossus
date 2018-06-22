@@ -13,3 +13,7 @@ change_mode = false;
 
 
 direction = 0;
+
+
+
+startup_timer = 8 * room_speed;

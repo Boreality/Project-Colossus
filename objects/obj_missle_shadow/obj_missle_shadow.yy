@@ -1,28 +1,38 @@
 {
-    "id": "85f3ae63-d040-4429-9d5b-31ebad0b8974",
+    "id": "5765d392-50ad-4142-8478-55c2ae36f7f2",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_boss",
+    "name": "obj_missle_shadow",
     "eventList": [
         {
-            "id": "7caf05b1-189e-4b6c-b7dd-76e77233a5ec",
+            "id": "01c0e6f7-7bf3-4125-b251-a85011f27f1a",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "85f3ae63-d040-4429-9d5b-31ebad0b8974"
+            "m_owner": "5765d392-50ad-4142-8478-55c2ae36f7f2"
         },
         {
-            "id": "9d98f1c7-e7c9-4aba-b37a-384c209ed41d",
+            "id": "89efe84e-f6fd-4658-b95c-9a3688e4d21d",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "85f3ae63-d040-4429-9d5b-31ebad0b8974"
+            "m_owner": "5765d392-50ad-4142-8478-55c2ae36f7f2"
+        },
+        {
+            "id": "5914bc61-6607-46e5-8dab-22c28daa0718",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 2,
+            "eventtype": 3,
+            "m_owner": "5765d392-50ad-4142-8478-55c2ae36f7f2"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -41,23 +51,8 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": [
-        {
-            "id": "8403426b-dc55-4985-aec6-c70fcade5b0e",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "100",
-            "varName": "hp",
-            "varType": 0
-        }
-    ],
+    "properties": null,
     "solid": false,
-    "spriteId": "c2221105-34f3-4ac2-a513-b4202bb7eb2e",
+    "spriteId": "b852d39c-72a6-482c-b3e3-5a5938f75e2d",
     "visible": true
 }

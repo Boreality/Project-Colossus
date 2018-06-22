@@ -2,46 +2,49 @@
 x = obj_boss.x;
 y = obj_boss.y;
 
+//Time before starts
+startup_timer--;
+if(startup_timer <= 0)
+{
 
-
-firing_delay--;
+	firing_delay--;
  
-if(last_atk == "Slanted") or (last_atk == "null")
-{
-	if(firing)
+	if(last_atk == "Slanted") or (last_atk == "null")
 	{
-		direction = 0;
-		if(firing_delay == 0)
+		if(firing)
 		{
-			Fire90DegreesBig()
-			Fire90DegreesBig()
-			Fire90DegreesBig()
-			Fire90DegreesBig()
+			direction = 0;
+			if(firing_delay == 0)
+			{
+				Fire90DegreesBig()
+				Fire90DegreesBig()
+				Fire90DegreesBig()
+				Fire90DegreesBig()
 			
-			firing_delay = firing_delay_max;
-			last_atk = "Straight";
+				firing_delay = firing_delay_max;
+				last_atk = "Straight";
+			}
 		}
 	}
-}
 
-if(last_atk == "Straight")
-{
-	if(firing)
+	if(last_atk == "Straight")
 	{
-		direction = 45;
-		if(firing_delay == 0)
+		if(firing)
 		{
-			Fire90DegreesBig()
-			Fire90DegreesBig()
-			Fire90DegreesBig()
-			Fire90DegreesBig()
+			direction = 45;
+			if(firing_delay == 0)
+			{
+				Fire90DegreesBig()
+				Fire90DegreesBig()
+				Fire90DegreesBig()
+				Fire90DegreesBig()
 			
-			firing_delay = firing_delay_max;
-			last_atk = "Slanted";
+				firing_delay = firing_delay_max;
+				last_atk = "Slanted";
+			}
 		}
 	}
+
 }
-
-
 
 	
