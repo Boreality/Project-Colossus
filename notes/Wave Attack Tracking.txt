@@ -1,0 +1,8 @@
+Places worked in:
+Room: Triggers that include different numbers to make it easier to track which angle to fire with
+obj_wave: Not sure
+obj_boss: At the bottom of step event.
+		  In the collision event
+		  
+		  
+STATUS: BROKEN

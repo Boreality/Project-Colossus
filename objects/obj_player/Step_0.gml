@@ -17,15 +17,15 @@ hsp = walk_spd * MoveH;
 vsp = walk_spd * MoveV;
 
 //Horizontal Collision  //DISABLED
-x+= hsp;
-if(place_meeting(x + hsp,vsp,obj_borders))
+if(place_meeting(x+hsp,y,obj_border))
 {
-	hsp = 0;	 
+	hsp = 0;	
 }
 
+x+= hsp;
 
 //Vertical Collision
-if(place_meeting(x,y+vsp,obj_borders))
+if(place_meeting(x,y+vsp,obj_border))
 {
 	vsp = 0;
 }
@@ -51,12 +51,25 @@ else image_blend = c_white;
 
 //Dodging (God help me)
 
-//Create if vsp+ and hsp- direction = something system to allow keyboard dodging instead of mouse
+//Horizontal
+if(hsp > 0) && (vsp == 0) direction = 0;
+if(hsp < 0) && (vsp == 0) direction = 180;
+if(vsp < 0) && (hsp == 0) direction = 90;
+if(vsp > 0) && (hsp == 0) direction = 270;
+
+//Vertical
+if(hsp < 0) && (vsp > 0) direction = 235; 
+if(hsp < 0) && (vsp < 0) direction = 135;
+if(hsp > 0) && (vsp < 0) direction = 45;
+if(hsp > 0) && (vsp > 0) direction = 315;
+
+
 
 dodge_delay--;
 if(key_dodge) && (dodge_delay <= 0)
 {
-	dodge_direction = obj_bow.direction;
+	//show_message(direction)
+	dodge_direction = direction;
 	
 	dodge_happening = true;
 	
@@ -83,8 +96,8 @@ if(dodge_happening)
 //Death
 if(hp <= 0)
 {
-	show_message("Rip dude");
-	game_restart();
+	//show_message("Rip dude");
+	//game_restart();
 	
 }
 

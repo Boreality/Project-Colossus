@@ -5,16 +5,6 @@
     "name": "obj_bullet_boss_big",
     "eventList": [
         {
-            "id": "da285dd8-8752-4986-abe6-1fcaf69d58fd",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "5306d1e2-7c1f-41e0-acb7-ae60f2935ecf",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "e582b5b2-2b5b-4749-9f4c-82652844e7c5"
-        },
-        {
             "id": "8e179265-d806-4342-988f-0fe88b560feb",
             "modelName": "GMEvent",
             "mvc": "1.0",

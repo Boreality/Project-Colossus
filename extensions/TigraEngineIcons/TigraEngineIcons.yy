@@ -1,0 +1,70 @@
+{
+    "id": "143c01aa-48aa-4617-b7b3-a99cf09556a6",
+    "modelName": "GMExtension",
+    "mvc": "1.0",
+    "name": "TigraEngineIcons",
+    "IncludedResources": [
+        "Sprites\\icons\\spr_icon_unknown",
+        "Sprites\\icons\\spr_icon_event",
+        "Sprites\\icons\\spr_icon_audio",
+        "Sprites\\icons\\spr_icon_camera",
+        "Sprites\\icons\\spr_icon_effect",
+        "Sprites\\icons\\spr_icon_controller",
+        "Sprites\\icons\\spr_icon_configuration",
+        "Sprites\\icons\\spr_icon_preloader",
+        "Sprites\\icons\\spr_icon_debug",
+        "Sprites\\icons\\spr_icon_timer",
+        "Sprites\\icons\\spr_icon_connect",
+        "Sprites\\icons\\spr_icon_animation",
+        "Sprites\\icons\\spr_icon_path",
+        "Sprites\\icons\\spr_icon_hud",
+        "Sprites\\icons\\spr_icon_list",
+        "Sprites\\icons\\spr_icon_menu",
+        "Sprites\\icons\\spr_icon_cursor",
+        "Sprites\\icons\\spr_icon_message",
+        "Sprites\\icons\\spr_icon_light",
+        "Sprites\\icons\\spr_icon_savedata",
+        "Sprites\\icons\\spr_icon_terrain",
+        "Sprites\\icons\\spr_icon_text",
+        "Sprites\\icons\\spr_icon_exit",
+        "Sprites\\icons\\spr_icon_script",
+        "Sprites\\icons\\spr_icon_3dobject"
+    ],
+    "androidPermissions": [
+        
+    ],
+    "androidProps": false,
+    "androidactivityinject": "",
+    "androidclassname": "",
+    "androidinject": "",
+    "androidmanifestinject": "",
+    "androidsourcedir": "",
+    "author": "",
+    "classname": "",
+    "copyToTargets": -1,
+    "date": "2018-03-26 03:06:39",
+    "description": "",
+    "extensionName": "",
+    "files": [
+        
+    ],
+    "gradleinject": "",
+    "helpfile": "",
+    "installdir": "",
+    "iosProps": false,
+    "iosSystemFrameworkEntries": [
+        
+    ],
+    "iosThirdPartyFrameworkEntries": [
+        
+    ],
+    "iosplistinject": "",
+    "license": "Free to use, also for commercial games.",
+    "maccompilerflags": "",
+    "maclinkerflags": "",
+    "macsourcedir": "",
+    "packageID": "com.alexandervrs.tigraengineicons",
+    "productID": "ACBD3CFF4E539AD869A0E8E3B4B022DD",
+    "sourcedir": "",
+    "version": "1.0.0"
+}

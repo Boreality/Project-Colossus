@@ -1,4 +1,4 @@
-/// @desc
+/// @desc Air Bomb Attack
 //Boss dissapears for most of fight
 //Bombs go to players last position, when explode releases a couple of hexagonal bulletsget
 

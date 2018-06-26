@@ -12,5 +12,5 @@ dodge_direction = 0;
  
 dodge_happening = false;
 
-dodge_timer_max = 0.15 * room_speed;
+dodge_timer_max = 0.12 * room_speed;
 dodge_timer = dodge_timer_max;

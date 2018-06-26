@@ -1,4 +1,4 @@
-/// @desc
+/// @desc Consistent circle attack
 //A irregular circle on-off pattern around boss in 1 go
 
 //Same thing as atk1 but with adding 20 degrees and its all in 1 go. And for the next

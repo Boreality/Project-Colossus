@@ -1,8 +1,8 @@
 {
-    "id": "5306d1e2-7c1f-41e0-acb7-ae60f2935ecf",
+    "id": "98e129e1-cb59-4e06-a628-caac435b2ec9",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_borders",
+    "name": "obj_border_bullet",
     "eventList": [
         
     ],
