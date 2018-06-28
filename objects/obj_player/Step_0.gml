@@ -1,4 +1,4 @@
- //Input
+  //Input
 key_left = keyboard_check(ord("A"));
 key_right = keyboard_check(ord("D"));
 key_up = keyboard_check(ord("W"));
@@ -49,7 +49,7 @@ if(iFrame)
 else image_blend = c_white;
 	
 
-//Dodging (God help me)
+//Dodging (God help me) YEAAAA
 
 //Horizontal
 if(hsp > 0) && (vsp == 0) direction = 0;
@@ -68,11 +68,8 @@ if(hsp > 0) && (vsp > 0) direction = 315;
 dodge_delay--;
 if(key_dodge) && (dodge_delay <= 0)
 {
-	//show_message(direction)
 	dodge_direction = direction;
-	
 	dodge_happening = true;
-	
 	
 	dodge_delay = dodge_delay_max;
 }
@@ -80,8 +77,9 @@ if(dodge_happening)
 {
 	iFrame = true;
 	dodge_timer--;
-	x += lengthdir_x(20,dodge_direction);
-	y += lengthdir_y(20,dodge_direction); 
+	
+	move(20,dodge_direction);
+	
 	
 	
 	if(dodge_timer <= 0)
@@ -93,7 +91,7 @@ if(dodge_happening)
 }
 
 
-//Death
+//Death Disabled for debug
 if(hp <= 0)
 {
 	//show_message("Rip dude");
