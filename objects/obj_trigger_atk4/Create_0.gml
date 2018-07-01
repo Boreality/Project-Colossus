@@ -1,5 +1,8 @@
 /// @desc
-place_temp = -1;
+ddirection = 0;
+
+
+
 
 
 /*

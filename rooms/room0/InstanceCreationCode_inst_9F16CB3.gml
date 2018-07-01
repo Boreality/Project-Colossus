@@ -1,1 +1,1 @@
-place_temp = 1;
+ddirection = 180; 

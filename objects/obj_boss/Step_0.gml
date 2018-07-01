@@ -1,12 +1,13 @@
  /// @desc
 
  #region Stage changer DEACTIVATED
-/*
+
 
 if(hp >= (round((hp_max/num_of_stages)*(num_of_stages - 1))))	//Health divided by number of stages, have amount of health needed for change. Times to be the desired amount (if stages = 4, should be 75)
 {
 	if(check0)
 	{
+		path_end();
 		attack = 3;	
 		active = true;
 		
@@ -18,23 +19,43 @@ if(hp >= (round((hp_max/num_of_stages)*(num_of_stages - 2))) ) && (hp < (round((
 {
 	if(check1)
 	{
+		path_end();
 		attack = 2;
 		active = true; 
 		
 		check1 = false;
 	}
 }
-if(hp < ((hp_max/num_of_stages)*(num_of_stages - 2)))
+
+if(hp >= (round((hp_max/num_of_stages)*(num_of_stages - 3))) ) && (hp < (round((hp_max/num_of_stages)*(num_of_stages - 2))) )
 {
 	if(check2)
 	{
-		attack = 1;
-		active = true;
+		path_end();
+		attack = 4;
+		active = true; 
 		
 		check2 = false;
 	}
 }
- */
+
+if(hp < ((hp_max/num_of_stages)*(num_of_stages - 3)))
+{
+	
+	
+	if(check3)
+	{
+		path_end();
+		x = 500;
+		y = 500;
+		
+		attack = 1;
+		active = true;
+		
+		check3 = false;
+	}
+}
+ 
 #endregion
 
 #region Activating Stages
@@ -68,7 +89,8 @@ if(active) && (attack == 4) //Wave
 	instance_create_layer(x,y,"Bossweapons",obj_boss_atk4);
 	path_start(p_atk_4,10,path_action_restart,true);
 	active = false;
-}
+} 
+
 #endregion
 
 #region Winning
@@ -79,10 +101,29 @@ if(hp <= 0)
 }
 #endregion
 
-if(place_meeting(x,y,obj_trigger_atk4))
+
+//ATK 4
+
+var trigger_object;
+
+if(place_meeting(x,y,obj_trigger_atk4)) && (test)
 {
+	test = false;
+	trigger_object = instance_place(x,y,obj_trigger_atk4);
+	temp_direction = trigger_object.ddirection;
+	with(instance_create_layer(x,y,"BigBullets",obj_wave))
+	{
+			speed = 6;
+			direction = other.temp_direction;
+			image_angle = direction;
+	}
+	temp_direction = 0;
 	
 }
+
+if(!place_meeting(x,y,obj_trigger_atk4)) test = true;
+
+
 /*
 place rules:
 0: 90
