@@ -1,2 +1,1 @@
-/// @desc
 instance_destroy();

@@ -21,7 +21,7 @@ else
 	{
 		with(instance_create_layer(x,y,"Bullets",obj_arrow))
 		{
-			speed = 10;
+			speed = 20;
 			direction = other.direction;
 			image_angle = direction;
 		}

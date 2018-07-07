@@ -4,6 +4,7 @@ key_right = keyboard_check(ord("D"));
 key_up = keyboard_check(ord("W"));
 key_down = keyboard_check(ord("S"));
 key_fire = mouse_check_button(mb_left);
+key_melee = mouse_check_button(mb_right);
 key_dodge = keyboard_check(vk_space);
 
 //Movement
@@ -80,8 +81,6 @@ if(dodge_happening)
 	
 	move(20,dodge_direction);
 	
-	
-	
 	if(dodge_timer <= 0)
 	{
 		dodge_timer = dodge_timer_max;
@@ -90,6 +89,24 @@ if(dodge_happening)
 	}
 }
 
+//Melee
+melee_delay--;
+if(key_melee) && (melee_delay <= 0)
+{
+	with(instance_create_layer(x,y,"Weapons",obj_melee))
+	{
+		x += lengthdir_x(50,direction);
+		y += lengthdir_y(50,direction)
+	}
+	melee_delay = melee_delay_max;
+}
+
+hp_timer--;
+if(hp_timer <= 0)
+{
+	hp--;
+	hp_timer = hp_timer_max;
+}
 
 //Death Disabled for debug
 if(hp <= 0)
