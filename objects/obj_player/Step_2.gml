@@ -3,5 +3,4 @@
 if(hp != hp_prev)
 {
 	iFrame = true; 
-	
 }

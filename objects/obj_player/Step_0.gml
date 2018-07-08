@@ -101,12 +101,7 @@ if(key_melee) && (melee_delay <= 0)
 	melee_delay = melee_delay_max;
 }
 
-hp_timer--;
-if(hp_timer <= 0)
-{
-	hp--;
-	hp_timer = hp_timer_max;
-}
+
 
 //Death Disabled for debug
 if(hp <= 0)

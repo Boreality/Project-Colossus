@@ -1,7 +1,7 @@
 /// @description Setting Variables
 
 //Health and Depleting Health
-hp_max = 100;
+hp_max = 60;
 hp = hp_max;
 
 hp_timer_max = 2 * room_speed;
