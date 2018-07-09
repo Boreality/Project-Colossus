@@ -27,6 +27,24 @@ dodge_happening = false;
 dodge_timer_max = 0.12 * room_speed;
 dodge_timer = dodge_timer_max;
 
+dodge_stamina_cost = 30;
+
 //Melee
 melee_delay_max = 20;
 melee_delay = melee_delay_max;
+
+melee_stamina_cost = 30;
+
+//Stamina Bar
+stamina_max = 100;
+stamina = stamina_max;
+stamina_action = false;
+
+stamina_pause = 0;
+stamina_pause_timer_max = 0.5 * room_speed;
+stamina_pause_timer = stamina_pause_timer_max;
+
+stamina_pause_exhaust_max = 1.5 * room_speed;
+stamina_pause_exhaust = stamina_pause_exhaust_max;
+
+
