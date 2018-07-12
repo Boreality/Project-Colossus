@@ -53,7 +53,7 @@ if(iFrame)
 else image_blend = c_white;
 #endregion
 
-#region//Dodging (God help me) YEAAAA
+#region//Dodging
 
 //Horizontal
 if(hsp > 0) && (vsp == 0) direction = 0;
@@ -72,6 +72,8 @@ if(hsp > 0) && (vsp > 0) direction = 315;
 dodge_delay--;
 if(key_dodge) && (dodge_delay <= 0) && (stamina != 0)
 {
+	
+	obj_bow.allowed = false;
 	dodge_direction = direction;
 	dodge_happening = true;
 	
@@ -100,12 +102,12 @@ if(dodge_happening)
 melee_delay--;
 if(key_melee) && (melee_delay <= 0) && (stamina != 0)
 {
+	key_fire = false;
 	with(instance_create_layer(x,y,"Weapons",obj_melee))
 	{
 		x += lengthdir_x(50,direction);
 		y += lengthdir_y(50,direction)
 	}
-	
 	
 	stamina -= melee_stamina_cost;
 	stamina_action = true;
@@ -137,23 +139,17 @@ if(stamina > 0)
 			stamina_pause_timer = stamina_pause_timer_max;
 		}
 	}
-	else
-	{
-		stamina++;
-	}
+	else stamina++;
 }
-else
+else //If run out of stamina
 {
 	stamina_pause_exhaust--;	
 	if(stamina_pause_exhaust <= 0)
 	{
-		stamina += 50;
+		stamina += 5;
 		stamina_pause_exhaust = stamina_pause_exhaust_max;	
 	}
-	
 }
-
-
 stamina = clamp(stamina,0,100);
 
 #endregion

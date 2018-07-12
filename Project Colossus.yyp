@@ -455,6 +455,14 @@
             }
         },
         {
+            "Key": "bd439780-8c70-46d5-8065-86694bf21cf4",
+            "Value": {
+                "id": "48d6e8d1-ef04-460f-9860-e4fb88a6ea83",
+                "resourcePath": "objects\\obj_boss_atk5\\obj_boss_atk5.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bdbcc071-c71f-49a3-ad55-2beb6ea15b46",
             "Value": {
                 "id": "7408df3f-c820-43f0-8467-cdfb4a28d96c",

@@ -1,8 +1,6 @@
- /// @desc
+ #region Stage changer deactivated
 
- #region Stage changer DEACTIVATED
-
-
+/*
 if(hp >= (round((hp_max/num_of_stages)*(num_of_stages - 1))))	//Health divided by number of stages, have amount of health needed for change. Times to be the desired amount (if stages = 4, should be 75)
 {
 	if(check0)
@@ -55,10 +53,11 @@ if(hp < ((hp_max/num_of_stages)*(num_of_stages - 3)))
 		check3 = false;
 	}
 }
- 
+ */
 #endregion
 
-#region Activating Stages
+#region Activating Stages deactivated
+/*
 if(active) && (attack == 1) //Spin and big bullets
 {	
 	instance_deactivate_layer("BossWeapons");
@@ -90,7 +89,7 @@ if(active) && (attack == 4) //Wave
 	path_start(p_atk_4,10,path_action_restart,true);
 	active = false;
 } 
-
+*/
 #endregion
 
 #region Winning
@@ -101,8 +100,7 @@ if(hp <= 0)
 }
 #endregion
 
-
-//ATK 4
+#region//ATK 4
 
 var trigger_object;
 
@@ -122,20 +120,4 @@ if(place_meeting(x,y,obj_trigger_atk4)) && (test)
 }
 
 if(!place_meeting(x,y,obj_trigger_atk4)) test = true;
-
-
-/*
-place rules:
-0: 90
-1: 0
-2: 270
-3: 180
-*/
-
-/*
-with(instance_create_layer(x,y,"Weapons",obj_wave))
-		{
-			speed = 10;
-			image_xscale = -1;
-		
-			direction = 180;
+#endregion
