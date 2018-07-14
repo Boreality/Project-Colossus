@@ -1,7 +1,7 @@
-attack = 4;
+attack = 3;
 active = true; //Set to false to start off
 
-num_of_stages = 4;
+num_of_stages = 5;
 boss_atk_1_2_delay = 10 * room_speed;
 
 new_phase_timer_max = 2 * room_speed;

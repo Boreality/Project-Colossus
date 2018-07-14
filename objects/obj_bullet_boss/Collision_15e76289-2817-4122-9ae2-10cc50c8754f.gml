@@ -1,7 +1,7 @@
 /// @desc
 if(!obj_player.iFrame)
 {
-	obj_player.hp -= 5;;
+	obj_player.hp -= 1;;
 	instance_destroy();
 }	
 	

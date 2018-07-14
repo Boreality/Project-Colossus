@@ -68,7 +68,6 @@ if(hsp > 0) && (vsp < 0) direction = 45;
 if(hsp > 0) && (vsp > 0) direction = 315;
 
 
-
 dodge_delay--;
 if(key_dodge) && (dodge_delay <= 0) && (stamina != 0)
 {
