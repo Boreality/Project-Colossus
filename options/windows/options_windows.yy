@@ -9,7 +9,7 @@
     "option_windows_copy_exe_to_dest": true,
     "option_windows_copyright_info": "(c) 2018 CompanyName",
     "option_windows_description_info": "A GameMaker Studio 2 Game",
-    "option_windows_display_cursor": true,
+    "option_windows_display_cursor": false,
     "option_windows_display_name": "Boss fight Project by Boreality",
     "option_windows_enable_steam": false,
     "option_windows_executable_name": "Project Colossus",
