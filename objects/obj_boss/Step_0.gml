@@ -60,40 +60,28 @@ if(hp < ((hp_max/num_of_stages)*(num_of_stages - 4)))
 
 if(active) && (attack == 1) //Spin and big bullets
 {	
-	instance_deactivate_layer("BossWeapons");
-	instance_create_layer(x,y,"BossWeapons",obj_boss_atk1_1);
 	instance_create_layer(x,y,"BossWeapons",obj_boss_atk1_2);
-	
-	active = false; //Prevents mutliple boss attack instances
-
+	initiate_stage(obj_boss_atk1_1);
 }
 
 if(active) && (attack == 2) //Circle
 {
-	instance_deactivate_layer("BossWeapons");
-	instance_create_layer(x,y,"BossWeapons",obj_boss_atk2);
-	active = false; 
+	initiate_stage(obj_boss_atk2);
 }
 
 if(active) && (attack == 3) //Missle
 {
-	instance_deactivate_layer("BossWeapons");
-	instance_create_layer(x,y,"BossWeapons",obj_boss_atk3);
-	active = false; 
+	initiate_stage(obj_boss_atk3);
 }
 
 if(active) && (attack == 4) //Wave
 {
-	instance_deactivate_layer("Bossweapons");
-	instance_create_layer(x,y,"Bossweapons",obj_boss_atk4);
 	path_start(p_atk_4,10,path_action_restart,true);
-	active = false;
+	initiate_stage(obj_boss_atk4);
 } 
 if(active) && (attack == 5) //melee
 {
-	instance_deactivate_layer("Bossweapons");
-	instance_create_layer(x,y,"Bossweapons",obj_boss_atk5);
-	active = false;
+	initiate_stage(obj_boss_atk5);
 }
 #endregion
 
@@ -112,7 +100,7 @@ if(place_meeting(x,y,obj_player))  obj_player.hp-= 1;
 #endregion
 
 
-#region//ATK 4
+#region//ATK 4 also fucking mess
 
 var trigger_object;
 
@@ -128,7 +116,6 @@ if(place_meeting(x,y,obj_trigger_atk4)) && (test)
 			image_angle = direction;
 	}
 	temp_direction = 0;
-	
 }
 
 if(!place_meeting(x,y,obj_trigger_atk4)) test = true;
