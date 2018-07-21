@@ -9,8 +9,10 @@ image_angle = direction
 
 
 
-//Firing System
 
+
+
+//Firing System
 if(obj_player.key_fire)
 {
 	firing_delay--;

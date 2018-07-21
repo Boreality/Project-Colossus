@@ -12,13 +12,18 @@ timer_preperation = timer_parry_flash_max;
 
 timer_recovery_max = 1.5 * room_speed;
 timer_recovery = timer_recovery_max;
+
+//Delays
+bullet_side_delay_max = 1 * room_speed;
+bullet_side_delay = bullet_side_delay_max;
+
 //Stage
 stage_current = "Walking";
 
 
 //Check
 check_player_pos = true;
-
+parried = false;
 
 //Variables
 player_x = 0;

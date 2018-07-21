@@ -47,7 +47,7 @@ if(hp < ((hp_max/num_of_stages)*(num_of_stages - 4)))
 	{
 		path_end();
 		x = 500;
-		y = 500;
+		y = (room_height / 2);
 		attack = 1;
 		active = true;
 		check3 = false;
@@ -104,6 +104,13 @@ if(hp <= 0)
 	game_end();
 }
 #endregion
+
+#region Damage done to play if touchy
+if(place_meeting(x,y,obj_player))  obj_player.hp-= 1;
+
+
+#endregion
+
 
 #region//ATK 4
 

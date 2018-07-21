@@ -1,4 +1,4 @@
 /// @desc
-with(obj_boss) hp-= 3;
+with(obj_boss) hp-= 8;
 
 instance_destroy();
