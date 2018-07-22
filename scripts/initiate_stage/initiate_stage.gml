@@ -1,5 +1,5 @@
 /// initiate_stage()
-/// @arg atkObj
+/// @arg atk_obj
 
 
 	instance_deactivate_layer("BossWeapons");

@@ -35,6 +35,22 @@ if(place_meeting(x,y+vsp,obj_border))
 y+= vsp;
 #endregion
 
+#region //Animation
+
+//Walking
+if(hsp != 0) || (vsp != 0)
+{
+	sprite_index = spr_player_run;
+}
+else
+{
+	sprite_index = spr_player;
+}
+
+
+
+#endregion
+
 #region//iFrames
 //Timer
 
@@ -55,22 +71,24 @@ else image_blend = c_white;
 
 #region//Dodging
 
-//Horizontal
-if(hsp > 0) && (vsp == 0) direction = 0;
-if(hsp < 0) && (vsp == 0) direction = 180;
-if(vsp < 0) && (hsp == 0) direction = 90;
-if(vsp > 0) && (hsp == 0) direction = 270;
-
-//Vertical
-if(hsp < 0) && (vsp > 0) direction = 235; 
-if(hsp < 0) && (vsp < 0) direction = 135;
-if(hsp > 0) && (vsp < 0) direction = 45;
-if(hsp > 0) && (vsp > 0) direction = 315;
-
-
 dodge_delay--;
 if(key_dodge) && (dodge_delay <= 0) && (stamina != 0)
 {
+	//directions and sprites
+	//Horizontal
+	if(hsp > 0) && (vsp == 0) direction = 0; sprite_index = spr_player_dodge_0;
+	if(hsp < 0) && (vsp == 0) direction = 180; sprite_index = spr_player_dodge_180;
+	if(vsp < 0) && (hsp == 0) direction = 90; sprite_index = spr_player_dodge_90;
+	if(vsp > 0) && (hsp == 0) direction = 270;
+
+	//Vertical
+	if(hsp < 0) && (vsp > 0) direction = 235; sprite_index = spr_player_dodge_235;
+	if(hsp < 0) && (vsp < 0) direction = 135; sprite_index = spr_player_dodge_135
+	if(hsp > 0) && (vsp < 0) direction = 45; sprite_index = spr_player_dodge_45;
+	if(hsp > 0) && (vsp > 0) direction = 315;
+
+
+
 	
 	obj_bow.allowed = false;
 	dodge_direction = direction;
@@ -83,7 +101,7 @@ if(key_dodge) && (dodge_delay <= 0) && (stamina != 0)
 }
 if(dodge_happening)
 {
-	iFrame = true;
+	//iFrame = true;
 	dodge_timer--;
 	
 	move(20,dodge_direction);

@@ -3,8 +3,6 @@
 
 switch(stage_current)
 {
-	//if(stage_current == "Walking")
-	//{
 	case "Walking":
 		with(obj_boss) //walking movement
 		{
@@ -22,12 +20,8 @@ switch(stage_current)
 		}
 		break;
 	
-//	}
-
 
 	//Preperation
-	//if(stage_current == "Preperation")
-	//{
 	case "Preperation":
 		//Preperation animation
 	
@@ -38,18 +32,14 @@ switch(stage_current)
 		{
 			timer_preperation = timer_preperation_max;
 			stage_current = "Charge";
-			
 		}
 		break;
 		
-	//}
+
 	
 	//Change
 	//Need extra hurtbox for parry and hitting player
 	case "Charge":
-	
-	//if(stage_current == "Charge")
-	//{
 		if(check_player_pos) //Placing end point
 		{
 			instance_create_layer(obj_player.x,obj_player.y,"Trigger",obj_trigger_atk5)
@@ -63,7 +53,6 @@ switch(stage_current)
 	   // bullet_side_delay--;
 	    //if(bullet_side_delay <= 0)
 	    //{
-	
 			with(obj_boss)
 			{
 		        with(instance_create_layer(x,y,"Bullets", obj_bullet_boss))
@@ -94,28 +83,19 @@ switch(stage_current)
 				}
 			}
 		}
-		
-	//}
 
 
 	//Recovery=
 	case "Recovery":
-	
-	//(stage_current == "Recovery")
-//	{
 		timer_recovery--;
 		//Recovery animation
-	
 		if(timer_recovery <= 0)
 		{
 		    parried = false;
 			timer_recovery = timer_recovery_max;
 			stage_current = "Walking";
-			
 		}
 		break;
-	
-	//}
 }
 
 
