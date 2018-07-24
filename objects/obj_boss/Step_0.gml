@@ -5,27 +5,29 @@ if(hp >= (round((hp_max/num_of_stages)*(num_of_stages - 1))))	//Health divided b
 	if(check0)
 	{
 		path_end();
-		attack = 3;	
+		attack = attack.missle;	
 		active = true;
 		check0 = false;	
-	}
+	} 
+	//stage_changer_default(attack.missle,check0);
 }
 if(hp >= (round((hp_max/num_of_stages)*(num_of_stages - 2))) ) && (hp < (round((hp_max/num_of_stages)*(num_of_stages - 1))) )
 {
 	if(check1)
 	{
 		path_end();
-		attack = 2;
+		attack = attack.circle;
 		active = true; 
 		check1 = false;
-	}
+	} 
+	//stage_changer_default(2,check1);
 }
 if(hp >= (round((hp_max/num_of_stages)*(num_of_stages - 3))) ) && (hp < (round((hp_max/num_of_stages)*(num_of_stages - 2))) )
 {
 	if(check2)
 	{
 		path_end();
-		attack = 4;
+		attack = attack.wave;
 		active = true; 
 		check2 = false;
 	}
@@ -35,7 +37,9 @@ if(hp >= (round((hp_max/num_of_stages)*(num_of_stages - 4))) ) && (hp < (round((
 	if(check4)
 	{
 		path_end();
-		attack = 5;
+		attack = attack.melee;
+		instance_deactivate_object(obj_trigger_atk5);
+		
 		active = true; 
 		check4 = false;
 	}
@@ -45,10 +49,11 @@ if(hp < ((hp_max/num_of_stages)*(num_of_stages - 4)))
 {
 	if(check3)
 	{
+		speed = 0;
 		path_end();
 		x = 500;
 		y = (room_height / 2);
-		attack = 1;
+		attack = attack.spin_and_bullets;
 		active = true;
 		check3 = false;
 	}
@@ -56,33 +61,24 @@ if(hp < ((hp_max/num_of_stages)*(num_of_stages - 4)))
  
 #endregion
 
-#region Activating Stages deactivated
+#region Activating Stages 
 
-if(active) && (attack == 1) //Spin and big bullets
+if(active) && (attack == attack.spin_and_bullets) //Spin and big bullets 1
 {	
 	instance_create_layer(x,y,"BossWeapons",obj_boss_atk1_2);
 	initiate_stage(obj_boss_atk1_1);
 }
 
-if(active) && (attack == 2) //Circle
-{
-	initiate_stage(obj_boss_atk2);
-}
+if(active) && (attack == attack.circle) initiate_stage(obj_boss_atk2); //Circle 2
 
-if(active) && (attack == 3) //Missle
-{
-	initiate_stage(obj_boss_atk3);
-}
+if(active) && (attack == attack.missle) initiate_stage(obj_boss_atk3); //Missle 3
 
-if(active) && (attack == 4) //Wave
+if(active) && (attack == attack.wave) //Wave 4
 {
 	path_start(p_atk_4,10,path_action_restart,true);
 	initiate_stage(obj_boss_atk4);
 } 
-if(active) && (attack == 5) //melee
-{
-	initiate_stage(obj_boss_atk5);
-}
+if(active) && (attack == attack.melee) initiate_stage(obj_boss_atk5); //melee 5
 #endregion
 
 #region Winning
@@ -94,7 +90,14 @@ if(hp <= 0)
 #endregion
 
 #region Damage done to play if touchy
-if(place_meeting(x,y,obj_player))  obj_player.hp-= 1;
+if(place_meeting(x,y,obj_player))  
+{
+	if(!obj_player.iFrame)
+	{
+		obj_player.hp -= 1;;
+		
+	}		
+}
 
 
 #endregion

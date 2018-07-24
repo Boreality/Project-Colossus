@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "14ed5665-1e34-408f-9c45-e2921851853e",
+            "Value": {
+                "id": "3b9360ab-12d6-4684-aa7b-91d1bb845438",
+                "resourcePath": "scripts\\player_iframe\\player_iframe.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1e98cc81-7491-433f-91f1-00e63a4530f6",
             "Value": {
                 "id": "72575e83-db56-4749-aa94-56a642f05469",
@@ -172,6 +180,14 @@
                 "id": "b6451187-e6f9-4233-bf41-1d2125ce5782",
                 "resourcePath": "rooms\\room0\\room0.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "4e22515c-cb66-47b9-a768-779627f047d1",
+            "Value": {
+                "id": "9bb28e86-3cfe-4ee3-a477-32d63eb11a27",
+                "resourcePath": "scripts\\player_collision\\player_collision.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -615,6 +631,14 @@
             }
         },
         {
+            "Key": "d780b546-4eee-4cd2-ab55-237f37641176",
+            "Value": {
+                "id": "708157a3-a409-4bf0-a618-bbc2ef808bfa",
+                "resourcePath": "scripts\\player_get_input\\player_get_input.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d829f726-0a86-491d-8e88-f486d2b4f9aa",
             "Value": {
                 "id": "b071dda1-ecc0-4f6e-9624-b060f3f266f6",
@@ -692,6 +716,14 @@
                 "id": "3c2f321a-a4a6-43ba-9b7f-6e9b0b87120c",
                 "resourcePath": "objects\\obj_bullet_boss_big\\obj_bullet_boss_big.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ea753cfb-9f97-4bc3-b0d9-1a7d12596a2b",
+            "Value": {
+                "id": "4ccf0075-3bb6-4c9b-9dbc-783930dd6622",
+                "resourcePath": "scripts\\stage_changer_default\\stage_changer_default.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -796,7 +828,11 @@
         "579c5797-3fc1-4403-8853-4a11efad9f2c",
         "c116d2ee-89fd-4fe0-ae0e-1014be551d46",
         "04f09bfd-5816-4783-a65e-5bb0ceab0432",
-        "47f15f09-7f04-4dde-9e5d-cf4f7dbcf180"
+        "47f15f09-7f04-4dde-9e5d-cf4f7dbcf180",
+        "d780b546-4eee-4cd2-ab55-237f37641176",
+        "4e22515c-cb66-47b9-a768-779627f047d1",
+        "14ed5665-1e34-408f-9c45-e2921851853e",
+        "ea753cfb-9f97-4bc3-b0d9-1a7d12596a2b"
     ],
     "tutorial": ""
 }

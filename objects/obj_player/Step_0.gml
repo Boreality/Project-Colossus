@@ -1,12 +1,4 @@
-#region//Input
-key_left = keyboard_check(ord("A"));
-key_right = keyboard_check(ord("D"));
-key_up = keyboard_check(ord("W"));
-key_down = keyboard_check(ord("S"));
-key_fire = mouse_check_button(mb_left);
-key_melee = mouse_check_button(mb_right);
-key_dodge = keyboard_check(vk_space);
-#endregion
+player_get_input();
 
 #region//Movement
 var MoveH
@@ -19,21 +11,7 @@ hsp = walk_spd * MoveH;
 vsp = walk_spd * MoveV;
 #endregion
 
-#region//Horizontal Collision 
-if(place_meeting(x+hsp,y,obj_border))
-{
-	hsp = 0;	
-}
-
-x+= hsp;
-
-//Vertical Collision
-if(place_meeting(x,y+vsp,obj_border))
-{
-	vsp = 0;
-}
-y+= vsp;
-#endregion
+player_collision();
 
 #region //Animation
 
@@ -51,23 +29,7 @@ else
 
 #endregion
 
-#region//iFrames
-//Timer
-
-if(iFrame)
-{
-	image_blend = c_black;
-	
-	iFrame_timer--;
-	if(iFrame_timer <= 0)
-	{
-			iFrame_timer = iFrame_timer_max;
-			iFrame = false;
-	}
-	
-}
-else image_blend = c_white;
-#endregion
+player_iframe();
 
 #region//Dodging
 
@@ -101,7 +63,7 @@ if(key_dodge) && (dodge_delay <= 0) && (stamina != 0)
 }
 if(dodge_happening)
 {
-	//iFrame = true;
+	iFrame = true;
 	dodge_timer--;
 	
 	move(20,dodge_direction);

@@ -18,8 +18,15 @@ bullet_side_delay_max = 1 * room_speed;
 bullet_side_delay = bullet_side_delay_max;
 
 //Stage
-stage_current = "Walking";
 
+enum stage 
+{
+	walking,
+	preperation,
+	charge,
+	recovery
+}
+stage = stage.walking;
 
 //Check
 check_player_pos = true;

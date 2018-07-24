@@ -1,9 +1,9 @@
 
 //Walking
 
-switch(stage_current)
+switch(stage)
 {
-	case "Walking":
+	case stage.walking:
 		with(obj_boss) //walking movement
 		{
 			//Animation change
@@ -15,14 +15,14 @@ switch(stage_current)
 		{
 			obj_boss.speed = 0;
 			timer_walking = timer_walking_max;
-			stage_current = "Preperation";
+			stage = stage.preperation;
 			
 		}
 		break;
 	
 
 	//Preperation
-	case "Preperation":
+	case stage.preperation:
 		//Preperation animation
 	
 		//Parry stuff
@@ -31,7 +31,7 @@ switch(stage_current)
 		if(timer_preperation <= 0)
 		{
 			timer_preperation = timer_preperation_max;
-			stage_current = "Charge";
+			stage = stage.charge;
 		}
 		break;
 		
@@ -39,7 +39,7 @@ switch(stage_current)
 	
 	//Change
 	//Need extra hurtbox for parry and hitting player
-	case "Charge":
+	case stage.charge:
 		if(check_player_pos) //Placing end point
 		{
 			instance_create_layer(obj_player.x,obj_player.y,"Trigger",obj_trigger_atk5)
@@ -78,7 +78,7 @@ switch(stage_current)
 				{
 					check_player_pos = true;
 					instance_deactivate_object(obj_trigger_atk5);
-					stage_current = "Recovery";
+					stage = stage.recovery;
 					break;
 				}
 			}
@@ -86,14 +86,14 @@ switch(stage_current)
 
 
 	//Recovery=
-	case "Recovery":
+	case stage.recovery:
 		timer_recovery--;
 		//Recovery animation
 		if(timer_recovery <= 0)
 		{
 		    parried = false;
 			timer_recovery = timer_recovery_max;
-			stage_current = "Walking";
+			stage = stage.walking;
 		}
 		break;
 }
