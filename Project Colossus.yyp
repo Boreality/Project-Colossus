@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "308b5d00-7d7b-43e6-bc9d-d716146460e1",
+            "Value": {
+                "id": "6be7dcd5-cf52-454b-905b-d63567de5090",
+                "resourcePath": "rooms\\testing_grounds\\testing_grounds.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "33e6db12-4654-4b56-8b2a-c275e8ac65e3",
             "Value": {
                 "id": "52c5eb24-691a-4eb3-bf97-ce3fa4c8ca4f",
@@ -164,6 +172,14 @@
                 "id": "24e0e1cc-3b2f-4155-95ab-5f7ce14beac0",
                 "resourcePath": "sprites\\spr_player_dodge_180\\spr_player_dodge_180.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4201d601-d066-4aed-9102-f8bec56d1ee5",
+            "Value": {
+                "id": "90c7b81b-570d-46ca-91b5-7918a2b60258",
+                "resourcePath": "objects\\obj_missle_shadow_random\\obj_missle_shadow_random.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -848,7 +864,9 @@
         "d780b546-4eee-4cd2-ab55-237f37641176",
         "4e22515c-cb66-47b9-a768-779627f047d1",
         "14ed5665-1e34-408f-9c45-e2921851853e",
-        "ea753cfb-9f97-4bc3-b0d9-1a7d12596a2b"
+        "ea753cfb-9f97-4bc3-b0d9-1a7d12596a2b",
+        "b252072b-58df-4066-a9b9-2dc42523ebde",
+        "f6d32bb6-26ce-4a52-86e0-ebd5157d0ea9"
     ],
     "tutorial": ""
 }

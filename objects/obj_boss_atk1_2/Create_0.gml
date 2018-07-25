@@ -4,7 +4,7 @@ firing = true;
 
 //Straight or Slanted
 
-firing_delay_max = 2 * room_speed;
+firing_delay_max = second(1.2);
 firing_delay = firing_delay_max;
 
 bullet_spd = 2;
@@ -16,4 +16,4 @@ direction = 0;
 
 
 
-startup_timer = 8 * room_speed;
+startup_timer = second(8);

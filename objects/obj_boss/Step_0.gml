@@ -51,7 +51,7 @@ if(hp < ((hp_max/num_of_stages)*(num_of_stages - 4)))
 	{
 		speed = 0;
 		path_end();
-		x = 500;
+		x = (room_width / 2);
 		y = (room_height / 2);
 		attack = attack.spin_and_bullets;
 		active = true;
@@ -113,11 +113,13 @@ if(place_meeting(x,y,obj_trigger_atk4)) && (test)
 	test = false;
 	trigger_object = instance_place(x,y,obj_trigger_atk4);
 	temp_direction = trigger_object.ddirection;
+	temp_yscale = trigger_object._y_scale;
 	with(instance_create_layer(x,y,"BigBullets",obj_wave))
 	{
-			speed = 6;
-			direction = other.temp_direction;
-			image_angle = direction;
+		image_yscale = other.temp_yscale;
+		speed = obj_bullet_boss.bullet_spd;
+		direction = other.temp_direction;
+		image_angle = direction;
 	}
 	temp_direction = 0;
 }

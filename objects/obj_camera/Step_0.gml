@@ -8,10 +8,10 @@ if(instance_exists(obj_player))
 }	
 
 //Keep camera center inside room
-
+/*
 x = clamp(x,view_w_half+shake_buff,room_width-view_w_half-shake_buff);
 y = clamp(y,view_h_half+shake_buff,room_height-view_h_half-shake_buff);
-
+*/
 //Screenshake
 x += random_range(-shake_remain,shake_remain);
 y += random_range(-shake_remain,shake_remain);

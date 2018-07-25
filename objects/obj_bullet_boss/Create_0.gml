@@ -8,3 +8,5 @@ if(roll <= hp_pickup_chance)
 	hp_pickup_is = true;
 	//becomes health pickup	
 }
+
+bullet_spd = 6;

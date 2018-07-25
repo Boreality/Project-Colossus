@@ -3,7 +3,7 @@
 
 
 
-if(place_meeting(x,y,obj_border))
+if(place_meeting(x,y,obj_border_bullet))
 {
 	instance_destroy();	
 }

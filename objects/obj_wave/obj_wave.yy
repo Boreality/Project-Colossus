@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_wave",
     "eventList": [
-        
+        {
+            "id": "da8cc31b-79f6-4a52-92c2-7b234e2dd997",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "d829f726-0a86-491d-8e88-f486d2b4f9aa",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "60d1c94e-d2e9-4acf-8036-bad17cb08928"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

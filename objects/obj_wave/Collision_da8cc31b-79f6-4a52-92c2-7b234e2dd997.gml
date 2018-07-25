@@ -1,10 +1,9 @@
-/// @desc
+
 with(obj_player)
 {
 	if(!iFrame)
 	{
 		 hp -= 1;
-		with(other) instance_destroy();
 	}	
 	else
 	{
