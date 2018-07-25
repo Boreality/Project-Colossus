@@ -1,8 +1,18 @@
 /// @desc
-if(!obj_player.iFrame)
+with(obj_player)
 {
-	obj_player.hp -= 1;;
-	instance_destroy();
-}	
-	
+	if(!iFrame)
+	{
+		obj_player.hp -= 1;
+		
+	}	
+	else
+	{
+		if(other.hp_pickup_is)		
+		{
+			hp += 1;	
+		}
+	}
+}
+instance_destroy();
 	

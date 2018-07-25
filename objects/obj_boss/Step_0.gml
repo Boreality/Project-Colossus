@@ -65,8 +65,9 @@ if(hp < ((hp_max/num_of_stages)*(num_of_stages - 4)))
 
 if(active) && (attack == attack.spin_and_bullets) //Spin and big bullets 1
 {	
-	instance_create_layer(x,y,"BossWeapons",obj_boss_atk1_2);
+	
 	initiate_stage(obj_boss_atk1_1);
+	instance_create_layer(x,y,"BossWeapons",obj_boss_atk1_2);
 }
 
 if(active) && (attack == attack.circle) initiate_stage(obj_boss_atk2); //Circle 2

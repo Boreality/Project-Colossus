@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "14a1f007-79ee-4636-9131-e428fa1331c8",
+            "Value": {
+                "id": "31692d10-34ad-4ab7-9c0c-d4b6aa6ae4cf",
+                "resourcePath": "objects\\obj_camera\\obj_camera.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "14ed5665-1e34-408f-9c45-e2921851853e",
             "Value": {
                 "id": "3b9360ab-12d6-4684-aa7b-91d1bb845438",
@@ -471,14 +479,6 @@
             }
         },
         {
-            "Key": "a509e088-5c41-4151-866e-e4f3c1613376",
-            "Value": {
-                "id": "44b9142b-500e-4a9a-a8d8-3d887bdbc025",
-                "resourcePath": "sprites\\spr_hitbox_atk5\\spr_hitbox_atk5.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "a66d78c6-899d-4587-b2af-cd9b2597ec8b",
             "Value": {
                 "id": "dc881bfa-416c-4ee4-bb5d-a4170b15c680",
@@ -508,6 +508,14 @@
                 "id": "3402f81f-1cd5-446a-b1b4-e522b1c0439f",
                 "resourcePath": "views\\b251accf-4892-4e53-8c38-f6f74541c9cc.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b252072b-58df-4066-a9b9-2dc42523ebde",
+            "Value": {
+                "id": "1e38fc0f-c99c-4933-b348-c89e4ea0dfeb",
+                "resourcePath": "scripts\\second\\second.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -796,6 +804,14 @@
                 "id": "c0818590-3b04-49e6-9e0b-56f14b707848",
                 "resourcePath": "sprites\\spr_icon_path\\spr_icon_path.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f6d32bb6-26ce-4a52-86e0-ebd5157d0ea9",
+            "Value": {
+                "id": "9013cad3-4622-4f1c-9183-4016293f21b2",
+                "resourcePath": "scripts\\screenshake\\screenshake.yy",
+                "resourceType": "GMScript"
             }
         },
         {
