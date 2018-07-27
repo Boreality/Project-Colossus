@@ -1,32 +1,20 @@
 
-
-
-if(x_buf >= lengthdir_x(400, player_direction)) && (x_buf <= lengthdir_x(-400,player_direction))
+if(point_distance(x_buf,y_buf,obj_player.x,obj_player.y) > 400) && (point_distance(x_buf,y_buf,obj_boss.x,obj_boss.y) > 400)
 {
 	x = x_buf;	
+	y = y_buf;
+	allowed = true;
 }
 else
 {
 	x_buf = random_range(0,room_width);	
-}
-
-if(y_buf >= lengthdir_y(400, player_direction)) && (y_buf <= lengthdir_y(-400,player_direction))
-{
-	y = y_buf;
-}
-else
-{
 	y_buf = random_range(0,room_width);
 }
 
 
-
-
-
-pause--;
-if(pause <= 0)
+if(allowed) pause--;
+if(pause < 0) 
 {
 	instance_create_layer(x,y,"Bullets",obj_missle_boss);
 	instance_destroy();
 }
-	

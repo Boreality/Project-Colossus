@@ -40,19 +40,25 @@ switch(stage)
 	//Change
 	//Need extra hurtbox for parry and hitting player
 	case stage.charge:
+	
+	//Testing new method 
+	//x += lengthdir_x(point_distance(x,y,obj_player.x,obj_player.y) + 100,point_direction(x,y,obj_player.x,obj_player.y))
+	//y += lengthdir_y(point_distance(x,y,obj_player.x,obj_player.y) + 100,point_direction(x,y,obj_player.x,obj_player.y))
+	
+	
+	
 		if(check_player_pos) //Placing end point
 		{
-			instance_create_layer(obj_player.x,obj_player.y,"Trigger",obj_trigger_atk5)
+			 instance_create_layer(obj_player.x,obj_player.y,"Trigger",obj_trigger_atk5)
+			//instance_create_layer(lengthdir_x(point_distance(x,y,obj_player.x,obj_player.y),point_direction(x,y,obj_player.x,obj_player.y)),lengthdir_y(point_distance(x,y,obj_player.x,obj_player.y),point_direction(x,y,obj_player.x,obj_player.y)),"Trigger",obj_trigger_atk5)
 			check_player_pos = false;
 		}
+	
 		with(obj_boss) move(40,point_direction(x,y,obj_trigger_atk5.x, obj_trigger_atk5.y));
 		//parry
 		if(place_meeting(x,y,obj_melee)) parried = true;
 
 	    //Bullets flying by side
-	   // bullet_side_delay--;
-	    //if(bullet_side_delay <= 0)
-	    //{
 			with(obj_boss)
 			{
 		        with(instance_create_layer(x,y,"Bullets", obj_bullet_boss))
@@ -66,9 +72,7 @@ switch(stage)
 		            direction = other.direction - 90;
 		        }
 			}
-	        //bullet_side_delay = bullet_side_delay_max;
-	   // }
-    
+   
 	    //Ending phase
 		with(obj_boss)
 		{   

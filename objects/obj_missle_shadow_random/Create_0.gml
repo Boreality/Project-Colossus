@@ -7,5 +7,5 @@ y_buf = random_range(0,room_width);
 
 //lengthdir_x(400, player_direction);
 
-pause = second(0.6);
-
+pause = second(1);
+allowed = false;
