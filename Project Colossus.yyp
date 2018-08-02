@@ -231,6 +231,14 @@
             }
         },
         {
+            "Key": "149ee793-e1ab-4a98-86e4-5692bbac325a",
+            "Value": {
+                "id": "d336aafa-ce84-4407-bf8c-637e601d5c46",
+                "resourcePath": "objects\\obj_temp_bar\\obj_temp_bar.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "14a1f007-79ee-4636-9131-e428fa1331c8",
             "Value": {
                 "id": "31692d10-34ad-4ab7-9c0c-d4b6aa6ae4cf",
@@ -1111,6 +1119,14 @@
             }
         },
         {
+            "Key": "78f7b4e0-5e02-429d-b174-9dacfbaef000",
+            "Value": {
+                "id": "d1390540-8f66-4c54-8b28-37e9c6840467",
+                "resourcePath": "objects\\obj_arrow_rapid\\obj_arrow_rapid.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "7a9a5671-f15b-4eed-b920-c36951096a11",
             "Value": {
                 "id": "2dad7c0a-a6cc-42d2-a112-8aa89f83c166",
@@ -1644,6 +1660,14 @@
                 "id": "62f3af96-f2c8-450c-bf41-93e07b2ce705",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "a94687a3-7ada-4b8d-9e4e-26636d7fb55b",
+            "Value": {
+                "id": "dc64879f-1f89-46b9-bfa1-c67d7c4871cc",
+                "resourcePath": "views\\a94687a3-7ada-4b8d-9e4e-26636d7fb55b.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2311,6 +2335,14 @@
             }
         },
         {
+            "Key": "ec2c6c12-968c-4c8b-8feb-a92a9df24f16",
+            "Value": {
+                "id": "228176dc-bdc9-4bd1-9720-21fad9d2fbbd",
+                "resourcePath": "views\\ec2c6c12-968c-4c8b-8feb-a92a9df24f16.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "ec881349-e51c-4b35-895a-6e8aa67e2658",
             "Value": {
                 "id": "a71f7b8e-39e2-4fd0-b0d3-5326c5c36e75",
@@ -2428,6 +2460,14 @@
                 "id": "c0818590-3b04-49e6-9e0b-56f14b707848",
                 "resourcePath": "sprites\\spr_icon_path\\spr_icon_path.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f5ea649d-d237-4197-9d96-2743def0abaf",
+            "Value": {
+                "id": "0c8a94e9-6875-4485-8606-d79f4fc56811",
+                "resourcePath": "timelines\\timeline0\\timeline0.yy",
+                "resourceType": "GMTimeline"
             }
         },
         {

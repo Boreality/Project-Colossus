@@ -24,7 +24,7 @@ dodge_direction = 0;
  
 dodge_happening = false;
 
-dodge_timer_max = 0.12 * room_speed;
+dodge_timer_max = second(0.15);
 dodge_timer = dodge_timer_max;
 
 dodge_stamina_cost = 30;
@@ -47,4 +47,7 @@ stamina_pause_timer = stamina_pause_timer_max;
 stamina_pause_exhaust_max = 1.5 * room_speed;
 stamina_pause_exhaust = stamina_pause_exhaust_max;
 
+controller = false;
 
+//Control player has
+comtrol_amount = 1;

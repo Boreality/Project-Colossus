@@ -1,5 +1,9 @@
 player_get_input();
 
+if(key_dodge) || (key_down) || (key_fire) || (key_left) || (key_melee) || (key_right) || (key_up) controller = false;
+
+//if(abs(gamepad_axis_value(0,gp_axislh))) > 0.2;
+
 #region//Movement
 var MoveH
 var MoveV
@@ -9,7 +13,12 @@ MoveV = key_down - key_up;
 
 hsp = walk_spd * MoveH;
 vsp = walk_spd * MoveV;
+
+hsp = hsp * control_amount;
+vsp = vsp * control_amount;
 #endregion
+
+
 
 player_collision();
 
@@ -59,6 +68,8 @@ if(key_dodge) && (dodge_delay <= 0) && (stamina != 0)
 	stamina -= dodge_stamina_cost;
 	stamina_action = true;
 	
+	control_amount = 0;
+	
 	dodge_delay = dodge_delay_max;
 }
 if(dodge_happening)
@@ -68,11 +79,22 @@ if(dodge_happening)
 	
 	move(20,dodge_direction);
 	
+	//Smoother control for player
+	if(dodge_timer < (dodge_timer_max / 3))
+	{
+	    control_amount = 0.3;
+	}
+	else if(dodge_timer < (dodge_timer_max / 4))
+	{
+	    control_amount = 0.6;
+	}
+	
 	if(dodge_timer <= 0)
 	{
 		dodge_timer = dodge_timer_max;
 		dodge_happening = false;
 		iFrame = false;
+		control_amount = 1;
 	}
 }
 #endregion
