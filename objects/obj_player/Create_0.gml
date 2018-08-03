@@ -50,4 +50,4 @@ stamina_pause_exhaust = stamina_pause_exhaust_max;
 controller = false;
 
 //Control player has
-comtrol_amount = 1;
+control_amount = 1;

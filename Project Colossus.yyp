@@ -1039,6 +1039,14 @@
             }
         },
         {
+            "Key": "6df8b8e2-4dd9-4c32-a7e9-a8df34f0f145",
+            "Value": {
+                "id": "7fce363a-1906-420a-b79c-150ecf0476e5",
+                "resourcePath": "objects\\obj_display_manager\\obj_display_manager.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6e43e98a-b219-42b3-912d-59e3e313010a",
             "Value": {
                 "id": "6be3d7fc-957c-4dc7-aef0-a828e4ee6b93",
@@ -1524,6 +1532,14 @@
                 "id": "e625304b-55c2-47ed-896f-eddbbb49e35c",
                 "resourcePath": "sprites\\spr_icon_effect\\spr_icon_effect.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9e3c2ea3-a6e2-47ee-8340-542baae28639",
+            "Value": {
+                "id": "bca78a83-b235-4007-91fd-4732211180a2",
+                "resourcePath": "rooms\\ADisplay\\ADisplay.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
