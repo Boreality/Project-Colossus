@@ -887,6 +887,14 @@
             }
         },
         {
+            "Key": "5ed9ac42-d7a4-4af3-b4cf-250a40f51d86",
+            "Value": {
+                "id": "fa2e9661-5df4-40c7-ba5f-5c38324116f5",
+                "resourcePath": "objects\\obj_boss_atkfinal\\obj_boss_atkfinal.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5f47205c-f334-4904-9afb-09353c33f217",
             "Value": {
                 "id": "28856e2a-4612-4bb6-97b8-13c5930e5e7e",
@@ -1036,14 +1044,6 @@
                 "id": "0c182751-289b-44f6-97b9-91a98b1e585d",
                 "resourcePath": "scripts\\EaseInElastic\\EaseInElastic.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "6df8b8e2-4dd9-4c32-a7e9-a8df34f0f145",
-            "Value": {
-                "id": "7fce363a-1906-420a-b79c-150ecf0476e5",
-                "resourcePath": "objects\\obj_display_manager\\obj_display_manager.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -1559,6 +1559,14 @@
             }
         },
         {
+            "Key": "9efd283d-90a0-4407-baac-991d9a64c12a",
+            "Value": {
+                "id": "6affd1c4-64f8-4ac4-9557-dc75ea1b4509",
+                "resourcePath": "objects\\obj_game\\obj_game.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9f83aa69-5494-4719-9a44-6cd02ef6c65e",
             "Value": {
                 "id": "fac9b0af-fffc-4da1-a219-d6ff1147bc05",
@@ -1844,6 +1852,14 @@
                 "id": "41eac925-4849-46ae-99fc-a2020f59c551",
                 "resourcePath": "views\\b77a5df3-ae0b-400e-82f2-85d348a96619.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b7c7bd97-a538-4e1b-a7a2-6cac28c53dfd",
+            "Value": {
+                "id": "695e501e-6dad-4b96-b646-c3b1086be9af",
+                "resourcePath": "objects\\obj_trigger_dead\\obj_trigger_dead.yy",
+                "resourceType": "GMObject"
             }
         },
         {

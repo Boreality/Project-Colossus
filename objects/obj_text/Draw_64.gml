@@ -1,6 +1,4 @@
 
-display_set_gui_size(view_wport[0], view_hport[0]);
-
 draw_set_font(fnt_hp);
 
 draw_text(10,5,obj_player.hp);
