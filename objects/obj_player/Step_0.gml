@@ -59,8 +59,6 @@ if(key_dodge) && (dodge_delay <= 0) && (stamina != 0)
 	if(hsp > 0) && (vsp > 0) direction = 315;
 
 
-
-	
 	obj_bow.allowed = false;
 	dodge_direction = direction;
 	dodge_happening = true;
@@ -68,30 +66,32 @@ if(key_dodge) && (dodge_delay <= 0) && (stamina != 0)
 	stamina -= dodge_stamina_cost;
 	stamina_action = true;
 	
-	control_amount = 0;
+	//control_amount = 0;
 	
 	dodge_delay = dodge_delay_max;
 }
 if(dodge_happening)
 {
 	iFrame = true;
-	dodge_timer--;
+	dodge_timer++;
 	
 	move(20,dodge_direction);
 	
 	//Smoother control for player
-	if(dodge_timer < (dodge_timer_max / 3))
+	//control_amount = ((dodge_timer_max /100) * dodge_timer_max);
+	if(dodge_timer < ((dodge_timer_max / 3) * 2))
 	{
-	    control_amount = 0.3;
+	    control_amount = 0.8;
 	}
-	else if(dodge_timer < (dodge_timer_max / 4))
-	{
-	    control_amount = 0.6;
-	}
+	//else if(dodge_timer < (dodge_timer_max / 4))
+	//{
+	//    control_amount = 0.6;
+	//}
 	
-	if(dodge_timer <= 0)
+	
+	if(dodge_timer >= dodge_timer_max)
 	{
-		dodge_timer = dodge_timer_max;
+		dodge_timer = 0;
 		dodge_happening = false;
 		iFrame = false;
 		control_amount = 1;
@@ -99,22 +99,23 @@ if(dodge_happening)
 }
 #endregion
 
-#region//Melee
-melee_delay--;
-if(key_melee) && (melee_delay <= 0) && (stamina != 0)
-{
-	key_fire = false;
-	with(instance_create_layer(x,y,"Weapons",obj_melee))
-	{
-		x += lengthdir_x(50,direction);
-		y += lengthdir_y(50,direction)
-	}
+#region//Melee DISABLED
+
+//melee_delay--;
+//if(key_melee) && (melee_delay <= 0) && (stamina != 0)
+//{
+//	key_fire = false;
+//	with(instance_create_layer(x,y,"Weapons",obj_melee))
+//	{
+//		x += lengthdir_x(50,direction);
+//		y += lengthdir_y(50,direction)
+//	}
 	
-	stamina -= melee_stamina_cost;
-	stamina_action = true;
+//	stamina -= melee_stamina_cost;
+//	stamina_action = true;
 	
-	melee_delay = melee_delay_max;
-}
+//	melee_delay = melee_delay_max;
+//}
 #endregion
 
 #region//Stamina
@@ -163,3 +164,5 @@ if(hp <= 0)
 	
 }
 #endregion
+
+hp = clamp(hp,0,hp_max);
