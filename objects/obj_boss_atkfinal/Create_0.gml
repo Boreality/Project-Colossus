@@ -1,7 +1,7 @@
 /// @desc Planning and variables
 
 
-enum stage 
+enum status
 {
 	start,
 	retreat,
@@ -14,8 +14,11 @@ enum stage
 	recoil,
 	victory	
 }
-stage = stage.start;
+status = status.start;
 
+
+//All different singular variables for doing someting once
+check_start = true;
 
 
 

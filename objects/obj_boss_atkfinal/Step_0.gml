@@ -1,18 +1,33 @@
 /// @description Final Phase
 
 
-switch(stage)
+switch(status)
 {
-	case stage.start:
-	//Play all below once
-	//Dead animation
-	instance_create_layer(x,y,"Trigger",obj_trigger_dead);
-	//stop here
-	with(obj_trigger_dead) if(place_meeting(x,y,obj_player)) stage = stage.retreat;
+	case status.start:
+
+	
+		if(check_start)
+		{
+			//Dead animation
+			instance_create_layer(x,y,"Trigger",obj_trigger_dead);
+			check_start = false;
+		}
+		with(obj_trigger_dead) if(place_meeting(x,y,obj_player)) with(other) status = status.retreat;
+	
+		break;
+	
+	case status.retreat:
+	
+	//Screaming animation
+	//Running animation upwards
+	with(obj_boss) y -= 8;
+	//Wall destroying animation
+	//switch room
+	
+	
+	
 	
 	break;
-	
-	
 	
 	
 	
