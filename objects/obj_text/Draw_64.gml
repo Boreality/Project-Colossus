@@ -1,4 +1,6 @@
-
+//display_set_gui_size(camera_get_view_width(global.camera), camera_get_view_height(global.camera));
+//display_set_gui_size(obj_display.ideal_width, obj_display.ideal_height);
+display_set_gui_size(camera_get_view_width(global.camera),camera_get_view_height(global.camera));
 draw_set_font(fnt_hp);
 
 draw_text(10,5,obj_player.hp);

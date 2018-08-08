@@ -231,14 +231,6 @@
             }
         },
         {
-            "Key": "149ee793-e1ab-4a98-86e4-5692bbac325a",
-            "Value": {
-                "id": "d336aafa-ce84-4407-bf8c-637e601d5c46",
-                "resourcePath": "objects\\obj_temp_bar\\obj_temp_bar.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "14a1f007-79ee-4636-9131-e428fa1331c8",
             "Value": {
                 "id": "31692d10-34ad-4ab7-9c0c-d4b6aa6ae4cf",
@@ -1204,6 +1196,14 @@
                 "id": "b49fb6ae-544b-41ad-b6bd-d74c333c907f",
                 "resourcePath": "scripts\\Ease\\Ease.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "7f9c0cba-5f79-44e1-bd85-6eb79aa7ef2b",
+            "Value": {
+                "id": "f36d5197-7b62-47d2-af58-33789e693865",
+                "resourcePath": "objects\\obj_display\\obj_display.yy",
+                "resourceType": "GMObject"
             }
         },
         {
