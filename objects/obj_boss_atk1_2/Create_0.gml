@@ -7,7 +7,7 @@ firing = true;
 firing_delay_max = second(1.2);
 firing_delay = firing_delay_max;
 
-bullet_spd = 2;
+bullet_spd = 1.5;
 
 change_mode = false;
 

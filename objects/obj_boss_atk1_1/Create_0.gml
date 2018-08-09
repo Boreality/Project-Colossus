@@ -8,4 +8,4 @@ firing_delay = firing_delay_max;
 rotation_spd_max = 20;
 rotation_spd = rotation_spd_max;
 
-bullet_spd = 7;
+bullet_spd = 6;

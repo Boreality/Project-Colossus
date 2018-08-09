@@ -14,6 +14,9 @@ reload_mag = reload_mag_max;
 
 
 
+controller_angle = 0;
+
+
 enum state
 {
     rapid,

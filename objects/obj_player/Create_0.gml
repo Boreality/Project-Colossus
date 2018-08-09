@@ -18,8 +18,8 @@ flicker_timer = flicker_timer_max;
 
 
 //Dodging
-dodge_delay_max = 0.6 * room_speed;
-dodge_delay = dodge_delay_max
+dodge_delay_max = second(0.6);
+dodge_delay = dodge_delay_max;
 dodge_direction = 0;
  
 dodge_happening = false;
@@ -51,3 +51,6 @@ controller = false;
 
 //Control player has
 control_amount = 1;
+
+
+controller_angle = 0

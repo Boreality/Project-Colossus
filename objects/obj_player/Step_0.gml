@@ -2,7 +2,25 @@ player_get_input();
 
 if(key_dodge) || (key_down) || (key_fire) || (key_left) || (key_melee) || (key_right) || (key_up) controller = false;
 
-//if(abs(gamepad_axis_value(0,gp_axislh))) > 0.2;
+if(abs(gamepad_axis_value(0,gp_axislh))> 0.2) or (abs(gamepad_axis_value(0,gp_axislv)) > 0.2)//If beyond the *deadzone*
+{
+	key_left = abs(min(gamepad_axis_value(0,gp_axislh),0));
+	key_right = max(gamepad_axis_value(0,gp_axislh),0);
+	key_up =  abs(min(gamepad_axis_value(0,gp_axislv),0));
+	key_down = max(gamepad_axis_value(0,gp_axislv),0);
+	controller = true;
+}
+if(gamepad_button_check_pressed(0,gp_face1))
+{
+	key_dodge = 1;
+	controller = true
+}
+
+if(controller)
+{
+	obj_cursor.visible_ = false;	
+}
+else obj_cursor.visible_ = true;
 
 #region//Movement
 var MoveH
@@ -42,22 +60,34 @@ player_iframe();
 
 #region//Dodging
 
+//Controller checking angle
+var controllerh = gamepad_axis_value(0,gp_axislh);
+var controllerv = gamepad_axis_value(0,gp_axislv);
+if(abs(controllerh) > 0.2) or (abs(controllerv) > 0.2) controller_angle = point_direction(0,0,controllerh,controllerv);
+
 dodge_delay--;
-if(key_dodge) && (dodge_delay <= 0) && (stamina != 0)
+if((key_dodge) or (gamepad_button_check_pressed(0,gp_shoulderlb)))  && (stamina != 0) && (dodge_delay <= 30)
 {
 	//directions and sprites
-	//Horizontal
-	if(hsp > 0) && (vsp == 0) direction = 0; sprite_index = spr_player_dodge_0;
-	if(hsp < 0) && (vsp == 0) direction = 180; sprite_index = spr_player_dodge_180;
-	if(vsp < 0) && (hsp == 0) direction = 90; sprite_index = spr_player_dodge_90;
-	if(vsp > 0) && (hsp == 0) direction = 270;
+	if(!controller)
+	{
+		//Horizontal
+		if(hsp > 0) && (vsp == 0) direction = 0; sprite_index = spr_player_dodge_0;
+		if(hsp < 0) && (vsp == 0) direction = 180; sprite_index = spr_player_dodge_180;
+		if(vsp < 0) && (hsp == 0) direction = 90; sprite_index = spr_player_dodge_90;
+		if(vsp > 0) && (hsp == 0) direction = 270;
 
-	//Vertical
-	if(hsp < 0) && (vsp > 0) direction = 235; sprite_index = spr_player_dodge_235;
-	if(hsp < 0) && (vsp < 0) direction = 135; sprite_index = spr_player_dodge_135
-	if(hsp > 0) && (vsp < 0) direction = 45; sprite_index = spr_player_dodge_45;
-	if(hsp > 0) && (vsp > 0) direction = 315;
-
+		//Vertical
+		if(hsp < 0) && (vsp > 0) direction = 235; sprite_index = spr_player_dodge_235;
+		if(hsp < 0) && (vsp < 0) direction = 135; sprite_index = spr_player_dodge_135
+		if(hsp > 0) && (vsp < 0) direction = 45; sprite_index = spr_player_dodge_45;
+		if(hsp > 0) && (vsp > 0) direction = 315;
+	}
+	else
+	{	
+		direction = controller_angle;
+	}
+	
 
 	obj_bow.allowed = false;
 	dodge_direction = direction;
