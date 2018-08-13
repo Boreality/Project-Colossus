@@ -20,9 +20,17 @@ switch(status)
 	
 	//Screaming animation
 	//Running animation upwards
-	with(obj_boss) y -= 8;
+	with(obj_boss)
+	{
+		y += 8;
+	}
+	if(check_destruct)
+	{
+		instance_create_layer(obj_boss.x,obj_boss.y,"BossWeapons",obj_destruct_collision)
+		check_destruct = false;
+	}
 	//Wall destroying animation
-	//switch room
+	
 	
 	
 	
