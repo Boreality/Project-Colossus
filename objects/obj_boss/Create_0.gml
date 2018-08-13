@@ -1,3 +1,8 @@
+
+
+stage_switch_enabled = true;
+
+
 attack = attack.missle;
 active = true; //Set to false to start off
 
