@@ -7,8 +7,8 @@ if(point_distance(x_buf,y_buf,obj_player.x,obj_player.y) > 400) && (point_distan
 }
 else
 {
-	x_buf = random_range(0,room_width);	
-	y_buf = random_range(0,room_width);
+	x_buf = random_range(0,inst_185FA82F.sprite_width);	
+	y_buf = random_range(0,inst_185FA82F.sprite_width );
 }
 
 

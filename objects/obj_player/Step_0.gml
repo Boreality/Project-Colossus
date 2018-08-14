@@ -189,8 +189,8 @@ stamina = clamp(stamina,0,100);
 #region//Death Disabled for debug
 if(hp <= 0)
 {
-	//show_message("Rip dude");
-	//game_restart();
+	show_message("Rip dude");
+	game_restart();
 	
 }
 #endregion

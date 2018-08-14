@@ -151,6 +151,14 @@
             }
         },
         {
+            "Key": "0eea1f2e-dbb4-4085-9f92-165605adbfa1",
+            "Value": {
+                "id": "2e7bf60f-e4ca-4de8-892e-1146e0e60f5d",
+                "resourcePath": "objects\\obj_trigger_stop\\obj_trigger_stop.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0f5faea6-914f-491b-944d-4ff350dc0c30",
             "Value": {
                 "id": "8a558cb5-f7e4-41d0-9b77-d1bfe943af29",
@@ -663,6 +671,14 @@
             }
         },
         {
+            "Key": "4d1da77b-fa50-4f60-956d-afefed082fa7",
+            "Value": {
+                "id": "449268fe-0b56-411a-971e-14804eeb2367",
+                "resourcePath": "rooms\\room1\\room1.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "4d4d646c-ba24-4dc5-8fee-fbd8302cbb69",
             "Value": {
                 "id": "d1dbaa57-dcfc-4d64-a646-624962f4abe0",
@@ -1108,6 +1124,14 @@
                 "id": "aaa83ac4-cec6-4644-bcc0-7e5307677d18",
                 "resourcePath": "scripts\\image_xscale__\\image_xscale__.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "749c0e34-c2d3-4242-8f0e-fab32104b86b",
+            "Value": {
+                "id": "56abab5d-d6ec-4ec3-a710-aa65c5654757",
+                "resourcePath": "sprites\\spr_room_box\\spr_room_box.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1716,6 +1740,14 @@
                 "id": "dc64879f-1f89-46b9-bfa1-c67d7c4871cc",
                 "resourcePath": "views\\a94687a3-7ada-4b8d-9e4e-26636d7fb55b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "aa1e7f7d-7313-460d-82fb-501827d1299d",
+            "Value": {
+                "id": "fdb61d7e-88c9-49de-bd8a-504e574dfa94",
+                "resourcePath": "objects\\obj_transition\\obj_transition.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -2636,6 +2668,14 @@
                 "id": "520c11fb-57fc-4be9-86f3-772db2b4bccc",
                 "resourcePath": "scripts\\EaseInOutCubic\\EaseInOutCubic.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fc226a53-ce1c-4c52-b9e9-5a6f14b84f23",
+            "Value": {
+                "id": "a4b587e4-10d1-4399-8195-dc8c87e1a6d8",
+                "resourcePath": "objects\\obj_room_box\\obj_room_box.yy",
+                "resourceType": "GMObject"
             }
         },
         {
