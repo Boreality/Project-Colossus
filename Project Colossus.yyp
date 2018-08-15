@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "1cce7032-e909-4ab5-acd5-8801ae9bea1c",
+            "Value": {
+                "id": "f289329b-924c-48a3-90fa-0399e248184c",
+                "resourcePath": "sprites\\spr_dungeon_ts\\spr_dungeon_ts.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1ccff697-ee40-4842-8c4b-9c654188d263",
             "Value": {
                 "id": "5dcce7dd-de78-4f83-bd04-11638b861cae",
@@ -756,6 +764,14 @@
                 "id": "be0d507d-e333-477c-8c1b-8ef64d0b7e87",
                 "resourcePath": "scripts\\TweensAll\\TweensAll.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "51df83df-0062-4649-9f80-1538ca319e46",
+            "Value": {
+                "id": "7bee4c9e-752c-40cb-91ef-dac430a6188f",
+                "resourcePath": "sprites\\spr_boss_running\\spr_boss_running.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1252,6 +1268,14 @@
                 "id": "cbdf5d4f-0524-4957-bd3b-60f4bbce569f",
                 "resourcePath": "views\\8110c552-4810-4b00-8a60-db95439c069f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "817198df-7301-45b4-9443-feb84ecb4ea6",
+            "Value": {
+                "id": "ca4af69d-1d00-4ffc-8e22-9b6e61315159",
+                "resourcePath": "sprites\\spr_boss_dead\\spr_boss_dead.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2423,6 +2447,14 @@
             }
         },
         {
+            "Key": "e9f4b527-0312-4376-84c1-4ddde257312b",
+            "Value": {
+                "id": "f98ac63f-f4eb-4c7e-a48b-8477b58f1587",
+                "resourcePath": "views\\e9f4b527-0312-4376-84c1-4ddde257312b.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "ea753cfb-9f97-4bc3-b0d9-1a7d12596a2b",
             "Value": {
                 "id": "4ccf0075-3bb6-4c9b-9dbc-783930dd6622",
@@ -2492,6 +2524,14 @@
                 "id": "71e624b3-67e0-4f26-82a8-40e1017cb3fd",
                 "resourcePath": "sprites\\spr_icon_timer\\spr_icon_timer.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f1a2b70f-5881-4725-81ff-77765d41b304",
+            "Value": {
+                "id": "182046bb-e1db-430e-bb77-2e5e9d60bee0",
+                "resourcePath": "tilesets\\ts_dungeon\\ts_dungeon.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {

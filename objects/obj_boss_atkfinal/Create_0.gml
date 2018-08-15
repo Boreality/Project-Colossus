@@ -19,6 +19,7 @@ status = status.start;
 
 //All different singular variables for doing someting once
 check_start = true;
+check_run = true;  
 check_destruct = true;
 
 
