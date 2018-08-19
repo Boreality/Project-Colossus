@@ -16,10 +16,6 @@ global.camera = camera_create_view(0, 0, ideal_width, ideal_height, 0, obj_playe
 
 for (var i = 1; i <= room_last; i++)
 	{
-		// set room size 
-		//room_set_width(i, global.screenWidth);
-		//room_set_height(i, global.screenHeight);
-	
 		// enable view and setup viewport
 		room_set_view_enabled(i, true)
 		room_set_viewport(i, 0, true, 0, 0, ideal_width, ideal_height);

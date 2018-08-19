@@ -25,10 +25,12 @@ switch(status)
  		break;
 	
 	case status.retreat:
-	
+		
 		if(check_run)
 		{
-			obj_boss.sprite_index = spr_boss_running;		
+			obj_boss.sprite_index = spr_boss_running;	
+			instance_create_layer(obj_boss.x,obj_boss.y,"BossWeapons",obj_destruct_collision)
+			instance_deactivate_object(obj_border_temp);
 			check_run = false;	
 		}
 		with(obj_boss)
@@ -41,16 +43,18 @@ switch(status)
 			
 			}
 		}
-		if(check_destruct)
-		{
-			instance_create_layer(obj_boss.x,obj_boss.y,"BossWeapons",obj_destruct_collision)
-			check_destruct = false;
-		}
+		
 	
 	break;
 	
-	case status.corridor:
+	//In room 2, both are positioned at opposite ends
+	case status.lazerdodge:
 		
+		if(check_fire)
+		{
+			with(obj_boss) instance_create_layer(x,y -10,"BossWeapons",obj_lazer);		
+			check_fire = false;
+		}
 	
 	break;
 	

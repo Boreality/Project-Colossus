@@ -38,7 +38,7 @@ vsp = vsp * control_amount;
 
 
 
-player_collision();
+
 
 #region //Animation
 
@@ -66,7 +66,7 @@ var controllerv = gamepad_axis_value(0,gp_axislv);
 if(abs(controllerh) > 0.2) or (abs(controllerv) > 0.2) controller_angle = point_direction(0,0,controllerh,controllerv);
 
 dodge_delay--;
-if((key_dodge) or (gamepad_button_check_pressed(0,gp_shoulderlb)))  && (stamina != 0) && (dodge_delay <= 30)
+if((key_dodge) or (gamepad_button_check_pressed(0,gp_shoulderlb)))  && (stamina != 0) && (dodge_delay <= 15)
 {
 	//directions and sprites
 	if(!controller)
@@ -129,6 +129,8 @@ if(dodge_happening)
 }
 #endregion
 
+player_collision();
+
 #region//Melee DISABLED
 
 //melee_delay--;
@@ -189,7 +191,7 @@ stamina = clamp(stamina,0,100);
 #region//Death Disabled for debug
 if(hp <= 0)
 {
-	show_message("Rip dude");
+	
 	game_restart();
 	
 }

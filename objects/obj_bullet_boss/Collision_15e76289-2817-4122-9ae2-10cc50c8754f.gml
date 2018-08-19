@@ -8,7 +8,7 @@ with(obj_player)
 	}	
 	else
 	{
-		if(other.hp_pickup_is)		
+		if(other.hp_pickup_is) && (dodge_happening)	
 		{
 			hp += 1;	
 			with(other) instance_destroy();
