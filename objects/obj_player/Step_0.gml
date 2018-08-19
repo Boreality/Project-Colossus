@@ -1,5 +1,6 @@
 player_get_input();
 
+#region Gamepad Stuff
 if(key_dodge) || (key_down) || (key_fire) || (key_left) || (key_melee) || (key_right) || (key_up) controller = false;
 
 if(abs(gamepad_axis_value(0,gp_axislh))> 0.2) or (abs(gamepad_axis_value(0,gp_axislv)) > 0.2)//If beyond the *deadzone*
@@ -21,6 +22,7 @@ if(controller)
 	obj_cursor.visible_ = false;	
 }
 else obj_cursor.visible_ = true;
+#endregion
 
 #region//Movement
 var MoveH
@@ -35,10 +37,6 @@ vsp = walk_spd * MoveV;
 hsp = hsp * control_amount;
 vsp = vsp * control_amount;
 #endregion
-
-
-
-
 
 #region //Animation
 
@@ -66,7 +64,7 @@ var controllerv = gamepad_axis_value(0,gp_axislv);
 if(abs(controllerh) > 0.2) or (abs(controllerv) > 0.2) controller_angle = point_direction(0,0,controllerh,controllerv);
 
 dodge_delay--;
-if((key_dodge) or (gamepad_button_check_pressed(0,gp_shoulderlb)))  && (stamina != 0) && (dodge_delay <= 15)
+if((key_dodge) or (gamepad_button_check_pressed(0,gp_shoulderlb)))  && (stamina != 0) && (dodge_delay <= 20)
 {
 	//directions and sprites
 	if(!controller)
@@ -107,18 +105,6 @@ if(dodge_happening)
 	
 	move(20,dodge_direction);
 	
-	//Smoother control for player
-	//control_amount = ((dodge_timer_max /100) * dodge_timer_max);
-	if(dodge_timer < ((dodge_timer_max / 3) * 2))
-	{
-	    control_amount = 0.8;
-	}
-	//else if(dodge_timer < (dodge_timer_max / 4))
-	//{
-	//    control_amount = 0.6;
-	//}
-	
-	
 	if(dodge_timer >= dodge_timer_max)
 	{
 		dodge_timer = 0;
@@ -126,6 +112,21 @@ if(dodge_happening)
 		iFrame = false;
 		control_amount = 1;
 	}
+	
+	
+	//Smoother control for player
+	//control_amount = ((dodge_timer_max /100) * dodge_timer_max);
+	//if(dodge_timer < ((dodge_timer_max / 3) * 2))
+	//{
+	//    control_amount = 0.8;
+	//}
+	//else if(dodge_timer < (dodge_timer_max / 4))
+	//{
+	//    control_amount = 0.6;
+	//}
+	
+	
+	
 }
 #endregion
 

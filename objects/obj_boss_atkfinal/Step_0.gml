@@ -57,7 +57,18 @@ switch(status)
 		}
 	
 	break;
+	case status.gameplay:
+		
+		if(check_retract)
+		{
+			obj_lazer.retract = true;
+			check_retract = false;
+		}
+		
+		
 	
+	
+	break;
 	
 	
 	

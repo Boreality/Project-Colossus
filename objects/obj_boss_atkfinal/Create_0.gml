@@ -6,7 +6,6 @@ enum status
 	start,
 	retreat,
 	lazerdodge,
-	lazertransition,
 	gameplay,
 	chargetrigger,
 	chargeslow,
@@ -20,7 +19,12 @@ status = status.start;
 check_start = true;
 check_run = true;  
 check_fire = true;
+check_retract = true;
+check_retract1 = true;
 
+
+charge_delay_max = second(0.4);
+charge_delay = charge_delay_max;
 
 
 
