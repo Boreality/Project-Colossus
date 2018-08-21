@@ -11,7 +11,8 @@
         "bdd532a8-c8b8-4094-8454-f69edc51251b",
         "5765d392-50ad-4142-8478-55c2ae36f7f2",
         "4201d601-d066-4aed-9102-f8bec56d1ee5",
-        "60d1c94e-d2e9-4acf-8036-bad17cb08928"
+        "60d1c94e-d2e9-4acf-8036-bad17cb08928",
+        "909df7aa-53dd-4796-b596-97de92b183f6"
     ],
     "filterType": "GMObject",
     "folderName": "Ammo",

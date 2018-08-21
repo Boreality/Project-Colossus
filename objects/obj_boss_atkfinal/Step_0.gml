@@ -64,13 +64,40 @@ switch(status)
 			obj_lazer.retract = true;
 			check_retract = false;
 		}
-		
-		
+	break;
 	
-	
+	case status.chargetrigger:
+	if(check_stop)
+	{
+		obj_player.control_amount = 0;
+		state = state.charge;
+		obj_camera.following = obj_boss;
+		obj_boss.sprite_index = spr_boss_rage;
+		
+		check_stop = false;
+	}
+
+
+//	Stage 7: Player moves to another piece of cover, at which point the boss charges towards player
+//	Have trigger directly at the point which the player will be running to for cover.
+//	Shift Camera to boss to see what they are doing
+//	While camera there, move player directly in charging line (shouldnt be too much of a difference)
 	break;
 	
 	
+	
+	case status.chargeslow:
+	if(check_charge)
+	{
+		obj_camera.following = obj_player;
+		obj_boss.sprite_index = spr_boss_run_back;
+		obj_player.control_amount = 0.05;
+		
+		check_charge = false;
+	}
+	with(obj_boss) y -= 3;
+	
+	break;
 	
 	
 	

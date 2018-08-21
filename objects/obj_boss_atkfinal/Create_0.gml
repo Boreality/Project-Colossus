@@ -21,7 +21,8 @@ check_run = true;
 check_fire = true;
 check_retract = true;
 check_retract1 = true;
-
+check_stop = true;
+check_charge = true;
 
 charge_delay_max = second(0.4);
 charge_delay = charge_delay_max;

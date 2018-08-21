@@ -64,7 +64,7 @@ var controllerv = gamepad_axis_value(0,gp_axislv);
 if(abs(controllerh) > 0.2) or (abs(controllerv) > 0.2) controller_angle = point_direction(0,0,controllerh,controllerv);
 
 dodge_delay--;
-if((key_dodge) or (gamepad_button_check_pressed(0,gp_shoulderlb)))  && (stamina != 0) && (dodge_delay <= 20)
+if((key_dodge) or (gamepad_button_check_pressed(0,gp_shoulderlb)))  && (stamina != 0) && (dodge_delay <= 20) && (control_amount == 1)
 {
 	//directions and sprites
 	if(!controller)
