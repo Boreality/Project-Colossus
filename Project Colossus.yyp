@@ -575,14 +575,6 @@
             }
         },
         {
-            "Key": "3f29b89b-0379-4f85-85e5-b928f430f7bd",
-            "Value": {
-                "id": "24e0e1cc-3b2f-4155-95ab-5f7ce14beac0",
-                "resourcePath": "sprites\\spr_player_dodge_180\\spr_player_dodge_180.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "3f6b7459-d7e2-405f-a8c3-491e442328d3",
             "Value": {
                 "id": "bd522c6b-7981-482c-874f-c365958f99a3",
@@ -1407,14 +1399,6 @@
             }
         },
         {
-            "Key": "85c82b86-f1c2-4f84-ac2e-0d4d211752f8",
-            "Value": {
-                "id": "91f27fc7-080b-4659-aad5-2273b76210c7",
-                "resourcePath": "sprites\\spr_player_dodge_45\\spr_player_dodge_45.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "85f3ae63-d040-4429-9d5b-31ebad0b8974",
             "Value": {
                 "id": "f71f885b-972b-493d-8c46-6eb2484d341a",
@@ -1564,14 +1548,6 @@
                 "id": "1ff183d6-69b6-48a9-bd40-638531476e63",
                 "resourcePath": "scripts\\TweenFireFrom\\TweenFireFrom.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "8f7275bc-ee7b-48a9-b771-fdb05da5be77",
-            "Value": {
-                "id": "b4e742bf-43ce-420d-9963-dd4580b4b6db",
-                "resourcePath": "sprites\\spr_player_dodge_90\\spr_player_dodge_90.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -1783,14 +1759,6 @@
             }
         },
         {
-            "Key": "a66d78c6-899d-4587-b2af-cd9b2597ec8b",
-            "Value": {
-                "id": "dc881bfa-416c-4ee4-bb5d-a4170b15c680",
-                "resourcePath": "views\\a66d78c6-899d-4587-b2af-cd9b2597ec8b.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "a74dce71-dccc-4d64-b165-26b5bc52e5b5",
             "Value": {
                 "id": "1be28649-8529-4aca-9814-dfa0cb1f3e32",
@@ -1828,14 +1796,6 @@
                 "id": "fdb61d7e-88c9-49de-bd8a-504e574dfa94",
                 "resourcePath": "objects\\obj_transition\\obj_transition.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "aa743e1c-ebb9-45aa-9d8e-c1326b697110",
-            "Value": {
-                "id": "ea1dcad5-1225-4d9d-a0a8-c503b8aa2199",
-                "resourcePath": "sprites\\spr_player_dodge_235\\spr_player_dodge_235.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -2527,14 +2487,6 @@
             }
         },
         {
-            "Key": "ebce7e2f-d9cb-4d16-a9b4-5d852f13966f",
-            "Value": {
-                "id": "3050e5be-e6d8-4573-b143-bc3dfe7fada3",
-                "resourcePath": "sprites\\spr_player_dodge_0\\spr_player_dodge_0.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "ec2c6c12-968c-4c8b-8feb-a92a9df24f16",
             "Value": {
                 "id": "228176dc-bdc9-4bd1-9720-21fad9d2fbbd",
@@ -2588,14 +2540,6 @@
                 "id": "182046bb-e1db-430e-bb77-2e5e9d60bee0",
                 "resourcePath": "tilesets\\ts_dungeon\\ts_dungeon.yy",
                 "resourceType": "GMTileSet"
-            }
-        },
-        {
-            "Key": "f1f9856f-d869-4b2b-9f09-2f63f0c88870",
-            "Value": {
-                "id": "bbca86a2-c670-43b8-8495-f8967527a5f4",
-                "resourcePath": "sprites\\spr_player_dodge_135\\spr_player_dodge_135.yy",
-                "resourceType": "GMSprite"
             }
         },
         {

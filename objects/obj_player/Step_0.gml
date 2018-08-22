@@ -50,7 +50,7 @@ else
 	sprite_index = spr_player;
 }
 
-
+if(hsp != 0) image_xscale = sign(hsp);
 
 #endregion
 
@@ -70,15 +70,15 @@ if((key_dodge) or (gamepad_button_check_pressed(0,gp_shoulderlb)))  && (stamina 
 	if(!controller)
 	{
 		//Horizontal
-		if(hsp > 0) && (vsp == 0) direction = 0; sprite_index = spr_player_dodge_0;
-		if(hsp < 0) && (vsp == 0) direction = 180; sprite_index = spr_player_dodge_180;
-		if(vsp < 0) && (hsp == 0) direction = 90; sprite_index = spr_player_dodge_90;
+		if(hsp > 0) && (vsp == 0) direction = 0;// sprite_index = spr_player_dodge_0;
+		if(hsp < 0) && (vsp == 0) direction = 180; //sprite_index = spr_player_dodge_180;
+		if(vsp < 0) && (hsp == 0) direction = 90; //sprite_index = spr_player_dodge_90;
 		if(vsp > 0) && (hsp == 0) direction = 270;
 
 		//Vertical
-		if(hsp < 0) && (vsp > 0) direction = 235; sprite_index = spr_player_dodge_235;
-		if(hsp < 0) && (vsp < 0) direction = 135; sprite_index = spr_player_dodge_135
-		if(hsp > 0) && (vsp < 0) direction = 45; sprite_index = spr_player_dodge_45;
+		if(hsp < 0) && (vsp > 0) direction = 235; //sprite_index = spr_player_dodge_235;
+		if(hsp < 0) && (vsp < 0) direction = 135; //sprite_index = spr_player_dodge_135
+		if(hsp > 0) && (vsp < 0) direction = 45; //sprite_index = spr_player_dodge_45;
 		if(hsp > 0) && (vsp > 0) direction = 315;
 	}
 	else

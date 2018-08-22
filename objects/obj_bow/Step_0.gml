@@ -2,17 +2,17 @@
 //Want system where player has to hold in bow, and slow down(disadvantaged state to fire)
 if(obj_player.control_amount != 0)
 {
-	key_charge = keyboard_check_pressed(ord("1"));
-	if(obj_player.control_amount == 1)
-	{
-		key_rapid = keyboard_check_pressed(ord("2"));
-	}
+	//key_charge = keyboard_check_pressed(ord("1"));
+	//if(obj_player.control_amount == 1)
+	//{
+		//key_rapid = keyboard_check_pressed(ord("2"));
+	//}
 	x = obj_player.x;
 	y = obj_player.y;
 
 
-	if((key_charge) or (gamepad_button_check(0,gp_padu))) state = state.charge;
-	if((key_rapid) or (gamepad_button_check(0,gp_padd))) state = state.rapid;
+	if((obj_player.key_fire) or (gamepad_button_check(0,gp_padu))) state = state.charge;
+	if((obj_player.key_fire_alt) or (gamepad_button_check(0,gp_padd))) state = state.rapid;
 
 	if(!obj_player.controller)
 	{
@@ -69,7 +69,7 @@ switch(state)
         break;
     case state.rapid:
 	firing_delay = firing_delay_max;
-    if((obj_player.key_fire)  or  (gamepad_button_check(0,gp_shoulderrb)))
+    if((obj_player.key_fire_alt)  or  (gamepad_button_check(0,gp_shoulderrb)))
     {
         firing_delay_rapid--;
         if(firing_delay_rapid <= 0) 
