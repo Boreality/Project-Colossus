@@ -1391,6 +1391,14 @@
             }
         },
         {
+            "Key": "859c5411-f52a-4994-af2a-ed114b6b6748",
+            "Value": {
+                "id": "67c40ea4-844a-4133-89a8-6e4905cceb8d",
+                "resourcePath": "sprites\\spr_dodge_particles\\spr_dodge_particles.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "85ba210d-3335-4ed0-9cc8-485b097de20a",
             "Value": {
                 "id": "a7394435-da2a-4d72-a960-496a06a7deef",
@@ -2047,6 +2055,14 @@
             }
         },
         {
+            "Key": "c023c63f-0627-47e0-8d3a-b6e295eaf6cd",
+            "Value": {
+                "id": "97a4a88f-4789-4f38-a4df-cd56ed968e7a",
+                "resourcePath": "sprites\\spr_dodge_trail\\spr_dodge_trail.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c116d2ee-89fd-4fe0-ae0e-1014be551d46",
             "Value": {
                 "id": "67d37028-fd10-44fc-8f7d-36aba7e2aa35",
@@ -2431,6 +2447,14 @@
             }
         },
         {
+            "Key": "e50c4dcb-bf48-4044-a60e-9936346b2786",
+            "Value": {
+                "id": "d20c3964-4517-4aeb-a63a-884b42b6586c",
+                "resourcePath": "sprites\\spr_bow_fire\\spr_bow_fire.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e582b5b2-2b5b-4749-9f4c-82652844e7c5",
             "Value": {
                 "id": "3c2f321a-a4a6-43ba-9b7f-6e9b0b87120c",
@@ -2540,6 +2564,14 @@
                 "id": "182046bb-e1db-430e-bb77-2e5e9d60bee0",
                 "resourcePath": "tilesets\\ts_dungeon\\ts_dungeon.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "f3137d2e-f960-4e97-8393-c248a77622f0",
+            "Value": {
+                "id": "2ddca63a-83d2-44f1-b864-0082326d5a64",
+                "resourcePath": "sprites\\spr_dodge_ball\\spr_dodge_ball.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

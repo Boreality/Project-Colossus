@@ -1,6 +1,8 @@
 if(iFrame)
 {
-	image_blend = c_black;
+	if(dodge_happening) image_blend = c_teal;
+	else image_blend = c_black;
+		
 	
 	iFrame_timer--;
 	if(iFrame_timer <= 0)

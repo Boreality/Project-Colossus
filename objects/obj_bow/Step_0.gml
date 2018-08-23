@@ -8,7 +8,7 @@ if(obj_player.control_amount != 0)
 		//key_rapid = keyboard_check_pressed(ord("2"));
 	//}
 	x = obj_player.x;
-	y = obj_player.y;
+	y = obj_player.y + 7;
 
 
 	if((obj_player.key_fire) or (gamepad_button_check(0,gp_padu))) state = state.charge;
@@ -36,6 +36,11 @@ if(obj_player.control_amount != 0)
 	
 }
 
+//animation
+if(image_angle > 90) && (image_angle < 270) image_yscale = -1;
+else image_yscale = 1;
+
+
 
 //Firing System
 
@@ -57,6 +62,7 @@ switch(state)
         			direction = other.image_angle;
         			image_angle = direction;
         		}
+				sprite_index = spr_bow_fire;
         		firing_delay = firing_delay_max;
 				reload_timer = reload_timer_max;
 				reload_mag = reload_mag_max;
