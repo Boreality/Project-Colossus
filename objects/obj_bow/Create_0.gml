@@ -12,6 +12,7 @@ reload_timer = reload_timer_max;
 reload_mag_max = 6;
 reload_mag = reload_mag_max;
 
+check = true;
 
 
 controller_angle = 0;

@@ -56,7 +56,8 @@ switch(state)
         {
         	if(firing_delay <= 0)
         	{
-        		with(instance_create_layer(x,y,"Bullets",obj_arrow))
+				
+        		with(instance_create_layer(x + lengthdir_x(70,image_angle),y + lengthdir_y(40,image_angle),"Bullets",obj_arrow))
         		{
         			speed = 25;
         			direction = other.image_angle;
@@ -74,21 +75,23 @@ switch(state)
         firing_delay = clamp(firing_delay,0,999);
         break;
     case state.rapid:
-	firing_delay = firing_delay_max;
+	//firing_delay = firing_delay_max;
+	firing_delay_rapid--;
     if((obj_player.key_fire_alt)  or  (gamepad_button_check(0,gp_shoulderrb)))
     {
-        firing_delay_rapid--;
+      //  firing_delay_rapid--;
         if(firing_delay_rapid <= 0) 
         {
 			if(reload_mag > 0)
 			{
-				with(instance_create_layer(x,y,"Bullets",obj_arrow_rapid))
+				with(instance_create_layer(x + lengthdir_x(70,image_angle),y + lengthdir_y(40,image_angle),"Bullets",obj_arrow_rapid))
 	        	{
 	       			speed = 15;
 	       			direction = other.image_angle + random_range(-bullet_offset,bullet_offset);
 	       			image_angle = direction;
 					other.reload_mag--;
         		}  
+				sprite_index = spr_bow_fire;
 				firing_delay_rapid = firing_delay_rapid_max;
 			}
 			else state = state.reload;
