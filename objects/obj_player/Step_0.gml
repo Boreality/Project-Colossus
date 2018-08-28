@@ -43,12 +43,17 @@ vsp = vsp * control_amount;
 //Walking
 if(hsp != 0) || (vsp != 0)
 {
-	sprite_index = spr_player_run;
+	//sprite_index = spr_player_run;
+	if(vsp > 0) sprite_index = spr_player_run_down;
+	if(vsp < 0) sprite_index = spr_player_run_up;
+	if(vsp == 0) && (hsp != 0) sprite_index = spr_player_run;
 }
 else
 {
 	sprite_index = spr_player;
+	if(vsp != 0) image_index = abs(sign(hsp));
 }
+
 
 if(hsp != 0) image_xscale = sign(hsp);
 
