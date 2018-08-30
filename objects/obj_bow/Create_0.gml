@@ -1,6 +1,6 @@
 /// @desc
 
-firing_delay_max = 2 * room_speed;
+firing_delay_max = 1.6 * room_speed;
 firing_delay = firing_delay_max;
 
 firing_delay_rapid_max = second(0.4);

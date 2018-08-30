@@ -53,7 +53,7 @@ if(stage_switch_enabled)
 			speed = 0;
 			path_end();
 			x = (room_width / 2);
-			y = (room_height / 2);
+			y = 700;
 			attack = attack.spin_and_bullets;
 			active = true;
 			check3 = false;

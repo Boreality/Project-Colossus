@@ -12,7 +12,7 @@ if(obj_player.control_amount != 0)
 
 
 	if((obj_player.key_fire) or (gamepad_button_check(0,gp_padu))) state = state.charge;
-	if((obj_player.key_fire_alt) or (gamepad_button_check(0,gp_padd))) state = state.rapid;
+	if((obj_player.key_fire_alt) or (gamepad_button_check(0,gp_padd))) and (state != state.reload) state = state.rapid;
 
 	if(!obj_player.controller)
 	{

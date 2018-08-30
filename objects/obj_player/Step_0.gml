@@ -194,12 +194,10 @@ stamina = clamp(stamina,0,100);
 
 #endregion
 
-#region//Death Disabled for debug
+#region//Death
 if(hp <= 0)
 {
-	
-	game_restart();
-	
+	room_restart();
 }
 #endregion
 

@@ -1,6 +1,6 @@
 
 
-stage_switch_enabled = true;
+stage_switch_enabled = false;
 
 
 attack = attack.missle;
