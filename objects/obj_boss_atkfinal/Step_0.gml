@@ -70,10 +70,10 @@ switch(status)
 	if(check_stop)
 	{
 		instance_destroy(obj_lazer);
-		obj_display.follow = obj_boss;
+		obj_player.control_amount = 0;
 		obj_camera.follow = obj_boss;
 		obj_boss.sprite_index = spr_boss_rage;
-		status = status.chargeslow;
+		
 		check_stop = false;
 	}
 	break;
@@ -90,16 +90,17 @@ switch(status)
 	case status.chargeslow:
 	if(check_charge)
 	{
-		
+		with(obj_player) image_speed = image_speed / 4;
+		with(obj_boss) image_speed = image_speed / 3;
 		
 		obj_boss.sprite_index = spr_boss_run_back;
 		obj_player.control_amount = 0.05;
 		
 		check_charge = false;
 	}
-	with(obj_boss) y -= 3;
+	with(obj_boss) y -= 2.3;
 	
-	//cahnge both buttons to charge with
+	
 	break;
 	
 	

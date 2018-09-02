@@ -18,3 +18,4 @@ if(pause < 0)
 	instance_create_layer(x,y,"Bullets",obj_missle_boss);
 	instance_destroy();
 }
+if(!instance_exists(obj_boss_atk3)) instance_destroy();

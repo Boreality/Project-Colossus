@@ -1,7 +1,7 @@
 
 
-stage_switch_enabled = false;
-
+stage_switch_enabled = true;
+enabled = true;
 
 attack = attack.missle;
 active = true; //Set to false to start off
@@ -22,6 +22,7 @@ check2 = true;
 check3 = true;
 check4 = true;
 check5 = true;
+check6 = true;
 
 hp_max = 100;
 hp = hp_max;

@@ -1,7 +1,8 @@
 
-//Follow player
+//Setting Camera Target
+camera_set_view_target(global.camera,follow)
 
-if(instance_exists(obj_player))
+if(instance_exists(obj_player)) or (instance_exists(obj_player_camera))
 {
 	xTo = follow.x;
 	yTo = follow.y;

@@ -22,3 +22,4 @@ else
 	}
 	
 }
+if(!instance_exists(obj_boss_atk3)) instance_destroy();

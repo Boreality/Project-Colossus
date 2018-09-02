@@ -13,6 +13,17 @@ if(obj_player.control_amount != 0)
 
 	if((obj_player.key_fire) or (gamepad_button_check(0,gp_padu))) state = state.charge;
 	if((obj_player.key_fire_alt) or (gamepad_button_check(0,gp_padd))) and (state != state.reload) state = state.rapid;
+	//with(obj_boss_atkfinal)
+	//{
+	//	if(status != status.chargeslow)
+	//	{
+	//		with(other) if((obj_player.key_fire_alt) or (gamepad_button_check(0,gp_padd))) and (state != state.reload) state = state.rapid;
+	//	}
+	//	else
+	//	{
+	//		with(other) if((obj_player.key_fire_alt) or (gamepad_button_check(0,gp_padd)))	state = state.charge;
+	//	}
+	//}
 
 	if(!obj_player.controller)
 	{
@@ -47,7 +58,8 @@ else image_yscale = 1;
 switch(state)
 {
     case state.charge:
-        if((obj_player.key_fire) or (gamepad_button_check(0,gp_shoulderrb)))
+		
+        if((obj_player.key_fire) or (gamepad_button_check(0,gp_shoulderrb))) or ifchargeslow(mouse_check_button(mb_left))
         {
         	firing_delay--;
         	obj_player.walk_spd = 3;
