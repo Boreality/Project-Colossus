@@ -194,6 +194,15 @@ stamina = clamp(stamina,0,100);
 
 #endregion
 
+//Camera location
+
+
+
+
+
+
+
+
 #region//Death
 if(hp <= 0)
 {

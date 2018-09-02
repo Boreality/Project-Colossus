@@ -69,13 +69,14 @@ switch(status)
 	case status.chargetrigger:
 	if(check_stop)
 	{
-		obj_player.control_amount = 0;
-		state = state.charge;
-		obj_camera.following = obj_boss;
+		instance_destroy(obj_lazer);
+		obj_display.follow = obj_boss;
+		obj_camera.follow = obj_boss;
 		obj_boss.sprite_index = spr_boss_rage;
-		
+		status = status.chargeslow;
 		check_stop = false;
 	}
+	break;
 
 
 //	Stage 7: Player moves to another piece of cover, at which point the boss charges towards player
@@ -89,7 +90,8 @@ switch(status)
 	case status.chargeslow:
 	if(check_charge)
 	{
-		obj_camera.following = obj_player;
+		
+		
 		obj_boss.sprite_index = spr_boss_run_back;
 		obj_player.control_amount = 0.05;
 		
@@ -97,6 +99,7 @@ switch(status)
 	}
 	with(obj_boss) y -= 3;
 	
+	//cahnge both buttons to charge with
 	break;
 	
 	

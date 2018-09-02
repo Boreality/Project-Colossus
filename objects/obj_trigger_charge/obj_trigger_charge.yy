@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_trigger_charge",
     "eventList": [
-        
+        {
+            "id": "f465d460-b9c9-4c00-8471-0b38ee6c3213",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "d829f726-0a86-491d-8e88-f486d2b4f9aa",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "35ac9b6e-b2c0-47be-880d-5ca154a3f65c"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

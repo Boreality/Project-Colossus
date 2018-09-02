@@ -1,5 +1,5 @@
 
-follow = obj_player_camera;
+follow = obj_display.follow;
 cam = global.camera;
 
 view_w_half = camera_get_view_width(cam) * 0.5;
