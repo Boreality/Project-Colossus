@@ -2,5 +2,5 @@
 
 if(instance_exists(obj_boss))
 {
-	obj_boss.hp -= 5;
+	obj_boss.hp -= 20;
 }	

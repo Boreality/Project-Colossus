@@ -12,7 +12,7 @@ ideal_width = round(ideal_height*aspect_ratio);
 if (ideal_width and 1) ideal_width++;
 
 //Changing Camera Follower
-
+/*
 var follow = obj_player_camera;
 
 
@@ -28,6 +28,9 @@ for (var i = 1; i <= room_last; i++)
 		// set camera for room
 		room_set_camera(i, 0, global.camera);
 	}
+*/
+global.checkpoint = false;
+
 
 surface_resize(application_surface,ideal_width,ideal_height);
 window_set_size(ideal_width,ideal_height);

@@ -1,6 +1,7 @@
 
 
-cam = global.camera;
+cam = view_camera[0];
+camera_set_view_size(cam,obj_display.ideal_width,obj_display.ideal_height)
 follow = obj_player_camera;
 
 
@@ -14,4 +15,4 @@ yTo = y;
 shake_length = 0;	//How long it takes
 shake_magnitude = 0;	//How intense it is
 shake_remain = 0;	//Timer 
-shake_buff = 32;
+shake_buff = 64;

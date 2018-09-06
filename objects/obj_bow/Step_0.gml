@@ -59,7 +59,7 @@ switch(state)
 {
     case state.charge:
 		
-        if((obj_player.key_fire) or (gamepad_button_check(0,gp_shoulderrb))) or ifchargeslow(mouse_check_button(mb_left))
+        if ((ifnotchargeslow(obj_player.key_fire) or (gamepad_button_check(0,gp_shoulderrb)))) or (ifchargeslow((mouse_check_button(mb_left)) or (ifchargeslow(mouse_check_button(mb_right)))))
         {
         	firing_delay--;
         	obj_player.walk_spd = 3;
@@ -87,9 +87,9 @@ switch(state)
         firing_delay = clamp(firing_delay,0,999);
         break;
     case state.rapid:
-	//firing_delay = firing_delay_max;
+	firing_delay = firing_delay_max;
 	firing_delay_rapid--;
-    if((obj_player.key_fire_alt)  or  (gamepad_button_check(0,gp_shoulderrb)))
+    if(ifnotchargeslow((obj_player.key_fire_alt)  or  (gamepad_button_check(0,gp_shoulderrb))))  
     {
       //  firing_delay_rapid--;
         if(firing_delay_rapid <= 0) 

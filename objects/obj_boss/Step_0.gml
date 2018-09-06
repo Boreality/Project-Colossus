@@ -104,7 +104,11 @@
 	{
 		if(!obj_player.iFrame)
 		{
-			obj_player.hp -= 1;;
+			with(obj_player)
+			{
+				flash = 5;
+				hp -= 1;
+			}
 		
 		}		
 	}
@@ -142,17 +146,33 @@
 	{
 		with(obj_boss_atkfinal)
 		{
-			if(status == status.chargeslow)	&& (other.check6)
+			if(status == status.chargeslow) or (status == status.recoil)
 			{
-				other.hp = 6; 
-				other.check6 = false;
-				
-			} else other.hp = 1;	
+				if((other.check6))
+				{
+					other.hp = 6; 
+					other.check6 = false;
+				}
+			} 
+			else
+			{
+				if(status != status.victory) and (status != status.recoil) and (status != status.landing) and (status != status.skidding)
+				{
+					other.hp = 1;	
+				}
+				else other.hp = 0;
+			}
 		}
 		
-		
+		//trying to make it impossible for player to hit boss when
+		//doing rest of the final. But being able to hit when charges
 	}
 	 
 	 
 	 
  }
+ 
+ hp_percentile = hp / hp_max;
+ 
+ 
+ 

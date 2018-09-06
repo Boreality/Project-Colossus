@@ -1,0 +1,2 @@
+global.checkpoint = true;
+

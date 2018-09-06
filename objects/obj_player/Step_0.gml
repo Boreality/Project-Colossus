@@ -24,7 +24,7 @@ if(controller)
 else obj_cursor.visible_ = true;
 #endregion
 
-#region//Movement
+#region Movement
 var MoveH
 var MoveV
 
@@ -38,7 +38,7 @@ hsp = hsp * control_amount;
 vsp = vsp * control_amount;
 #endregion
 
-#region //Animation
+#region Animation
 
 //Walking
 if(hsp != 0) || (vsp != 0)
@@ -51,17 +51,27 @@ if(hsp != 0) || (vsp != 0)
 else
 {
 	sprite_index = spr_player;
-	if(vsp != 0) image_index = abs(sign(hsp));
+	if(vsp != 0) image_image_index = abs(sign(hsp));
 }
 
 
 if(hsp != 0) image_xscale = sign(hsp);
 
+
+//if(dodge_happening)
+//{
+//	sprite_index = spr_dodge_ball
+	
+	
+//}else
+//{
+//	sprite_index = spr_player;
+//}
 #endregion
 
 player_iframe();
 
-#region//Dodging
+#region Dodging
 
 //Controller checking angle
 var controllerh = gamepad_axis_value(0,gp_axislh);
@@ -86,11 +96,7 @@ if((key_dodge) or (gamepad_button_check_pressed(0,gp_shoulderlb)))  && (stamina 
 		if(hsp > 0) && (vsp < 0) direction = 45; //sprite_index = spr_player_dodge_45;
 		if(hsp > 0) && (vsp > 0) direction = 315;
 	}
-	else
-	{	
-		direction = controller_angle;
-	}
-	
+	else direction = controller_angle;
 
 	obj_bow.allowed = false;
 	dodge_direction = direction;
@@ -98,8 +104,6 @@ if((key_dodge) or (gamepad_button_check_pressed(0,gp_shoulderlb)))  && (stamina 
 	
 	stamina -= dodge_stamina_cost;
 	stamina_action = true;
-	
-	//control_amount = 0;
 	
 	dodge_delay = dodge_delay_max;
 }
@@ -117,27 +121,13 @@ if(dodge_happening)
 		iFrame = false;
 		control_amount = 1;
 	}
-	
-	
-	//Smoother control for player
-	//control_amount = ((dodge_timer_max /100) * dodge_timer_max);
-	//if(dodge_timer < ((dodge_timer_max / 3) * 2))
-	//{
-	//    control_amount = 0.8;
-	//}
-	//else if(dodge_timer < (dodge_timer_max / 4))
-	//{
-	//    control_amount = 0.6;
-	//}
-	
-	
-	
+
 }
 #endregion
 
 player_collision();
 
-#region//Melee DISABLED
+#region Melee DISABLED
 
 //melee_delay--;
 //if(key_melee) && (melee_delay <= 0) && (stamina != 0)
@@ -156,7 +146,7 @@ player_collision();
 //}
 #endregion
 
-#region//Stamina
+#region Stamina
 
 
 //Trigger
@@ -194,20 +184,12 @@ stamina = clamp(stamina,0,100);
 
 #endregion
 
-//Camera location
-
-
-
-
-
-
-
-
-#region//Death
+#region Death
 if(hp <= 0)
 {
 	room_restart();
 }
-#endregion
 
 hp = clamp(hp,0,hp_max);
+#endregion
+

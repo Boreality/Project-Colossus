@@ -1,5 +1,5 @@
 //Setting Boss hp bar properties
-cam = global.camera;
+cam = obj_camera.cam;
 
 global.boss_hp_bar_x1 = (camera_get_view_width(cam) / 8) * 2;
 global.boss_hp_bar_y1 = (camera_get_view_height(cam) / 8) * 7;

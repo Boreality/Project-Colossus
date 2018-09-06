@@ -10,6 +10,8 @@ enum status
 	chargetrigger,
 	chargeslow,
 	recoil,
+	landing,
+	skidding,
 	victory	
 }
 status = status.start;
@@ -27,9 +29,26 @@ check_charge = true;
 charge_delay_max = second(0.4);
 charge_delay = charge_delay_max;
 
+recoil_check = true;
+recoil_check1 = false; //same just more helpfull in this case
+recoil_check2 = true;
+
+recoil_timer_max = second(0.3);
+recoil_timer = recoil_timer_max;
+
+recoil_timer1_max = 3;
+recoil_timer1 = recoil_timer1_max;
+
+recoil_timer2_max = second(1.5);
+recoil_timer2 = recoil_timer2_max;
 
 
+victory_delay_max = second(5);
+victory_delay = victory_delay_max;
 
+victory_check = true;
+
+slowing_down = 10;
 //--STAGES--
 
 //Stage 1: drops *dead* on floor. Player eventually walks over it, triggering next phase

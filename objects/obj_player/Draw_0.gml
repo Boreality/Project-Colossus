@@ -7,6 +7,24 @@ draw_healthbar(x -30,y - 100,x + 30, y - 70,id.stamina, c_black, c_red, c_green,
 
 
 
-
-
+if(iFrame)
+{
+	if(flash > 0)
+	{
+		shader_set(sh_red);
+		draw_self();
+		shader_reset();
+		flash--;
+	}
+	
+	
+	if(dodge_happening)
+	{
+		shader_set(sh_aqua);
+		draw_self();
+		shader_reset();
+		
+	}
+	
+}
 

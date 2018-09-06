@@ -1,6 +1,4 @@
 
-//Setting Camera Target
-camera_set_view_target(global.camera,follow)
 
 if(instance_exists(obj_player)) or (instance_exists(obj_player_camera))
 {
@@ -12,6 +10,8 @@ if(instance_exists(obj_player)) or (instance_exists(obj_player_camera))
 
 x = clamp(x,view_w_half+shake_buff,room_width-view_w_half-shake_buff);
 y = clamp(y,view_h_half+shake_buff,room_height-view_h_half-shake_buff);
+
+
 
 //Screenshake
 x += random_range(-shake_remain,shake_remain);

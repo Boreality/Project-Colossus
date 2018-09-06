@@ -1,5 +1,6 @@
 
 
+
 stage_switch_enabled = true;
 enabled = true;
 
@@ -13,6 +14,7 @@ boss_atk_1_2_delay = 10 * room_speed;
 new_phase_timer_max = 2 * room_speed;
 new_phase_timer = new_phase_timer_max;
 
+flash = 0;
 
 walkspd = 2;
 
@@ -24,8 +26,9 @@ check4 = true;
 check5 = true;
 check6 = true;
 
-hp_max = 100;
+hp_max = 200;
 hp = hp_max;
+hp_percentile = 0;
 
 
 temp_direction = 0;

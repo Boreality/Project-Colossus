@@ -1,6 +1,7 @@
 /// @desc
 with(obj_player)
 {
+	flash = 3;
 	if(!iFrame)
 	{
 		 hp -= 1;
