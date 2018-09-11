@@ -5,6 +5,9 @@ with(obj_boss_atkfinal)
 {
 	if(status == status.chargeslow)
 		{
-			return argument0
+			with(other)
+			{
+				return argument0;
+			}
 		}
 }

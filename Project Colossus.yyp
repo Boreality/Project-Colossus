@@ -2375,6 +2375,14 @@
             }
         },
         {
+            "Key": "d6fd75f2-9332-4991-9761-018060586e6d",
+            "Value": {
+                "id": "c84f1ef6-9843-4455-b825-c20de940f961",
+                "resourcePath": "sprites\\spr_arrow_rapid\\spr_arrow_rapid.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d7461f33-0275-4a99-aa03-dfbfa56491e6",
             "Value": {
                 "id": "3354114b-faed-4807-ad4e-91053392be9f",
@@ -2555,6 +2563,14 @@
             "Value": {
                 "id": "4668fd71-35f3-4745-a31a-3100f2b73245",
                 "resourcePath": "sprites\\spr_icon_event\\spr_icon_event.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e3a36abc-ba78-4e98-9711-ddb0c75e45f9",
+            "Value": {
+                "id": "5b96cad6-ff63-420b-9faf-91eedb63420d",
+                "resourcePath": "sprites\\spr_arrow_charge\\spr_arrow_charge.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2812,6 +2828,14 @@
                 "id": "a3b1e7bd-7735-44e9-a7fb-e482af3151ed",
                 "resourcePath": "scripts\\TweenExists\\TweenExists.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f675a8cd-cd99-4b7b-a296-e713356ce371",
+            "Value": {
+                "id": "3efbef7d-0374-4cfa-b619-fc6ff7c09a10",
+                "resourcePath": "sprites\\spr_player_dodge_collision\\spr_player_dodge_collision.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

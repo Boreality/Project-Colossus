@@ -57,6 +57,10 @@ else
 
 if(hsp != 0) image_xscale = sign(hsp);
 
+//if(dodge_happening)
+//{
+//	mask_index = spr_border_destruct;	
+//}
 
 //if(dodge_happening)
 //{

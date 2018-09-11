@@ -55,14 +55,17 @@ else image_yscale = 1;
 
 //Firing System
 
-switch(state)
-{
-    case state.charge:
-		
-        if ((ifnotchargeslow(obj_player.key_fire) or (gamepad_button_check(0,gp_shoulderrb)))) or (ifchargeslow((mouse_check_button(mb_left)) or (ifchargeslow(mouse_check_button(mb_right)))))
+
+    
+	//Charge
+        if((ifnotchargeslow(obj_player.key_fire) or (gamepad_button_check(0,gp_shoulderrb)))) or (ifchargeslow((mouse_check_button(mb_left)) or (ifchargeslow(mouse_check_button(mb_right)))))
         {
-        	firing_delay--;
-        	obj_player.walk_spd = 3;
+			if(obj_player.control_amount != 0)
+			{
+	        	firing_delay--;
+	        	obj_player.walk_spd = 3;
+				firing_delay_rapid = 0;
+			}
         }
         else
         {
@@ -85,13 +88,15 @@ switch(state)
         	obj_player.walk_spd = 5;
         }
         firing_delay = clamp(firing_delay,0,999);
-        break;
-    case state.rapid:
-	firing_delay = firing_delay_max;
-	firing_delay_rapid--;
+       
+    
+	//Rapid
+	//firing_delay = firing_delay_max;
+	
     if(ifnotchargeslow((obj_player.key_fire_alt)  or  (gamepad_button_check(0,gp_shoulderrb))))  
     {
-      //  firing_delay_rapid--;
+		firing_delay_rapid--;
+		firing_delay = firing_delay_max;
         if(firing_delay_rapid <= 0) 
         {
 			if(reload_mag > 0)
@@ -110,19 +115,21 @@ switch(state)
         }
         
     }
-    break;
     
-    case state.reload:
-	reload_timer--;
-	//reload animation here
-	if(reload_timer <= 0) 
-	{
-		reload_timer = reload_timer_max;
-		reload_mag = reload_mag_max;
-		state = state.rapid;
+    
+   //Reload
+   if(reload_mag <= 0)
+   {
+		reload_timer--;
+		//reload animation here
+		if(reload_timer <= 0) 
+		{
+			reload_timer = reload_timer_max;
+			reload_mag = reload_mag_max;
+			//state = state.rapid;
 		
-	}
-    break;
-}
+		}
+   }
 
 
+firing_delay_percetile =( firing_delay / firing_delay_max) * 100;

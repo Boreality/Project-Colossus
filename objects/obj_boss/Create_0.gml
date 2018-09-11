@@ -26,7 +26,7 @@ check4 = true;
 check5 = true;
 check6 = true;
 
-hp_max = 200;
+hp_max = 250;
 hp = hp_max;
 hp_percentile = 0;
 

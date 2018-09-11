@@ -10,7 +10,7 @@
     "option_windows_copyright_info": "(c) 2018 Nonexistance",
     "option_windows_description_info": "A game where you fight against a boss",
     "option_windows_display_cursor": false,
-    "option_windows_display_name": "Boss fight Project by Boreality",
+    "option_windows_display_name": "Project Colossus by Boreality",
     "option_windows_enable_steam": false,
     "option_windows_executable_name": "Project Colossus",
     "option_windows_icon": "${base_options_dir}\\windows\\icons\\icon.ico",
@@ -19,7 +19,7 @@
     "option_windows_interpolate_pixels": false,
     "option_windows_license": "${base_options_dir}\\windows\\installer\\license.txt",
     "option_windows_nsis_file": "${base_options_dir}\\windows\\installer\\nsis_script.nsi",
-    "option_windows_product_info": "Made in a big boy engine I swear",
+    "option_windows_product_info": "Project Colossus",
     "option_windows_resize_window": false,
     "option_windows_save_location": 0,
     "option_windows_scale": 0,
@@ -30,8 +30,8 @@
     "option_windows_use_splash": false,
     "option_windows_version": {
         "build": 0,
-        "major": 0,
-        "minor": 3,
+        "major": 1,
+        "minor": 0,
         "revision": 0
     },
     "option_windows_vsync": false
