@@ -30,6 +30,7 @@ for (var i = 1; i <= room_last; i++)
 	}
 */
 global.checkpoint = false;
+global.death = false;
 
 
 surface_resize(application_surface,ideal_width,ideal_height);

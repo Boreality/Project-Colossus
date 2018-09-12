@@ -245,9 +245,35 @@
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
+            "name": "Boss",
+            "id": "42463ec8-f44d-449a-bff1-6b6af6144f57",
+            "depth": 600,
+            "grid_x": 32,
+            "grid_y": 32,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "instances": [
+{"name": "inst_125B3477","id": "4f416889-3415-47b8-beac-f4c64c57f72a","colour": { "Value": 4294967295 },"creationCodeFile": "InstanceCreationCode_inst_125B3477.gml","creationCodeType": ".gml","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_125B3477","objId": "85f3ae63-d040-4429-9d5b-31ebad0b8974","properties": null,"rotation": 0,"scaleX": 1.5,"scaleY": 1.5,"mvc": "1.0","x": 1024,"y": 3712}
+            ],
+            "layers": [
+
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "modelName": "GMRInstanceLayer",
+            "mvc": "1.0",
+            "userdefined_depth": false,
+            "visible": true
+        },
+        {
+            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "BossWeapons",
             "id": "7d5e5700-e3a5-4713-a2cf-ea6c21b0f8d4",
-            "depth": 600,
+            "depth": 700,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -273,32 +299,6 @@
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Player",
             "id": "ddb9cb66-ae5b-415f-a4c1-f74b161c3f7b",
-            "depth": 700,
-            "grid_x": 32,
-            "grid_y": 32,
-            "hierarchyFrozen": false,
-            "hierarchyVisible": true,
-            "inheritLayerDepth": false,
-            "inheritLayerSettings": false,
-            "inheritSubLayers": false,
-            "inheritVisibility": false,
-            "instances": [
-{"name": "inst_6FD760E6","id": "f5f26877-fbe8-4b1f-80e1-f20f7904941d","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_6FD760E6","objId": "d829f726-0a86-491d-8e88-f486d2b4f9aa","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 992,"y": 160}
-            ],
-            "layers": [
-
-            ],
-            "m_parentID": "00000000-0000-0000-0000-000000000000",
-            "m_serialiseFrozen": false,
-            "modelName": "GMRInstanceLayer",
-            "mvc": "1.0",
-            "userdefined_depth": false,
-            "visible": true
-        },
-        {
-            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Boss",
-            "id": "42463ec8-f44d-449a-bff1-6b6af6144f57",
             "depth": 800,
             "grid_x": 32,
             "grid_y": 32,
@@ -309,7 +309,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-{"name": "inst_125B3477","id": "4f416889-3415-47b8-beac-f4c64c57f72a","colour": { "Value": 4294967295 },"creationCodeFile": "InstanceCreationCode_inst_125B3477.gml","creationCodeType": ".gml","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_125B3477","objId": "85f3ae63-d040-4429-9d5b-31ebad0b8974","properties": null,"rotation": 0,"scaleX": 1.5,"scaleY": 1.5,"mvc": "1.0","x": 1024,"y": 3712}
+{"name": "inst_6FD760E6","id": "f5f26877-fbe8-4b1f-80e1-f20f7904941d","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_6FD760E6","objId": "d829f726-0a86-491d-8e88-f486d2b4f9aa","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 992,"y": 160}
             ],
             "layers": [
 

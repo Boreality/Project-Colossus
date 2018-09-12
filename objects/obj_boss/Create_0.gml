@@ -1,6 +1,4 @@
 
-
-
 stage_switch_enabled = true;
 enabled = true;
 
@@ -41,6 +39,7 @@ enum attack
 	missle,
 	wave,
 	melee,
+	lazer,
 	length
 }
 

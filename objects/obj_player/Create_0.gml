@@ -1,7 +1,7 @@
 /// @description Setting Variables
 
 #region Health and Depleting Health
-hp_max = 5;
+hp_max = 8;
 hp = hp_max;
 
 hp_timer_max = 2 * room_speed;
@@ -56,3 +56,9 @@ controller_angle = 0;
 #endregion
 
 flash = 0;
+global.death = false;
+
+death_check = true;
+
+audio_sound_pitch(snd_revive,random_range(0.5,1.5));
+audio_play_sound(snd_revive,1,false);

@@ -191,7 +191,19 @@ stamina = clamp(stamina,0,100);
 #region Death
 if(hp <= 0)
 {
-	room_restart();
+	if(death_check)
+	{
+		audio_sound_pitch(snd_death,0.7);
+		audio_play_sound(snd_death,4,false);
+		death_check = false;
+	}
+		global.death = true;
+		sprite_index = spr_player_death;
+		control_amount = 0;
+		instance_deactivate_layer("Weapons");
+		
+	
+
 }
 
 hp = clamp(hp,0,hp_max);

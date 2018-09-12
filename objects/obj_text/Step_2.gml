@@ -1,4 +1,8 @@
-if(hp_boss_prev < obj_boss.hp)
+if(!global.death)
 {
-	reduction = true;	
+	if(hp_boss_prev < obj_boss.hp)
+	{
+		reduction = true;	
+	}
 }
+

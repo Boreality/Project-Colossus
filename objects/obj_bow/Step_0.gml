@@ -29,7 +29,7 @@ if(obj_player.control_amount != 0)
 	{
 		//put stuff here that only works with keyboard/mouse	
 		image_angle = point_direction(x,y,mouse_x,mouse_y);
-	
+
 	}
 	else
 	{
@@ -82,6 +82,9 @@ else image_yscale = 1;
         		firing_delay = firing_delay_max;
 				reload_timer = reload_timer_max;
 				reload_mag = reload_mag_max;
+				
+				//audio_sound_pitch(snd_fire,random_range(0.5,1.5));
+				//audio_play_sound(snd_fire,1,false);
         	}
         	else firing_delay = firing_delay_max;	
 			
@@ -108,6 +111,10 @@ else image_yscale = 1;
 	       			image_angle = direction;
 					other.reload_mag--;
         		}  
+				
+				//audio_sound_pitch(snd_fire,random_range(0.5,1.5));
+				//audio_play_sound(snd_fire,1,false);
+				
 				sprite_index = spr_bow_fire;
 				firing_delay_rapid = firing_delay_rapid_max;
 			}

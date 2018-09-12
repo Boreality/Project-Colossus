@@ -4,6 +4,9 @@
 	 #region Stage changer 
 	if(stage_switch_enabled)
 	{
+		
+		
+		
 		if(hp >= (round((hp_max/num_of_stages)*(num_of_stages - 1))))	//Health divided by number of stages, have amount of health needed for change. Times to be the desired amount (if stages = 4, should be 75)
 		{
 			if(check0)
@@ -13,30 +16,43 @@
 				active = true;
 				check0 = false;	
 			} 
-			//stage_changer_default(attack.missle,check0);
+			
 		}
-		if(hp >= (round((hp_max/num_of_stages)*(num_of_stages - 2))) ) && (hp < (round((hp_max/num_of_stages)*(num_of_stages - 1))) )
+			if(hp >= (round((hp_max/num_of_stages)*(num_of_stages - 2))) ) && (hp < (round((hp_max/num_of_stages)*(num_of_stages - 1))) ) //lazer
 		{
 			if(check1)
 			{
 				path_end();
-				attack = attack.circle;
+				attack = attack.lazer;
 				active = true; 
 				check1 = false;
 			} 
-			//stage_changer_default(2,check1);
+			
 		}
+		
+		
 		if(hp >= (round((hp_max/num_of_stages)*(num_of_stages - 3))) ) && (hp < (round((hp_max/num_of_stages)*(num_of_stages - 2))) )
 		{
 			if(check2)
 			{
 				path_end();
-				attack = attack.wave;
+				attack = attack.circle;
 				active = true; 
 				check2 = false;
-			}
+			} 
+			
 		}
 		if(hp >= (round((hp_max/num_of_stages)*(num_of_stages - 4))) ) && (hp < (round((hp_max/num_of_stages)*(num_of_stages - 3))) )
+		{
+			if(check3)
+			{
+				path_end();
+				attack = attack.wave;
+				active = true; 
+				check3 = false;
+			}
+		}
+		if(hp >= (round((hp_max/num_of_stages)*(num_of_stages - 5))) ) && (hp < (round((hp_max/num_of_stages)*(num_of_stages - 4))) )
 		{
 			if(check4)
 			{
@@ -49,9 +65,9 @@
 			}
 	
 		}
-		if(hp < ((hp_max/num_of_stages)*(num_of_stages - 4)))
+		if(hp < ((hp_max/num_of_stages)*(num_of_stages - 5)))
 		{
-			if(check3)
+			if(check5)
 			{
 				speed = 0;
 				path_end();
@@ -59,7 +75,7 @@
 				y = 700;
 				attack = attack.spin_and_bullets;
 				active = true;
-				check3 = false;
+				check5 = false;
 			}
 		}
 	}
@@ -86,12 +102,16 @@
 			initiate_stage(obj_boss_atk4);
 		} 
 		if(active) && (attack == attack.melee) initiate_stage(obj_boss_atk5); //melee 5
+		
+		if(active) && (attack == attack.lazer) initiate_stage(obj_boss_atk6); //Lazer circle
 	}
 	#endregion
 
 	#region Winning
 	if(hp <= 0)
 	{
+		audio_sound_pitch(snd_death,random_range(0.5,1.5));
+		audio_play_sound(snd_death,1,false);
 		hp = 1;
 		instance_deactivate_layer("BossWeapons");
 		instance_create_layer(x,y,"Bossweapons",obj_boss_atkfinal);

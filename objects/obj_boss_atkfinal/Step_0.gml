@@ -105,6 +105,12 @@ switch(status)
 	case status.recoil:
 	
 		obj_boss.sprite_index = spr_boss_recoil;
+		if(last_hit_check )
+		{
+			audio_sound_pitch(snd_finalhit,1);
+			audio_play_sound(snd_finalhit,5,false);
+			last_hit_check = false;
+		}
 		
 		obj_boss.y += 10;
 		recoil_timer--;

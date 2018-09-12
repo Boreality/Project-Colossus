@@ -46,6 +46,8 @@ recoil_timer2 = recoil_timer2_max;
 victory_delay_max = second(5);
 victory_delay = victory_delay_max;
 
+last_hit_check = true;
+
 victory_check = true;
 
 slowing_down = 10;
