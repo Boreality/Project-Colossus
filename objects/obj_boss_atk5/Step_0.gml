@@ -52,6 +52,10 @@ switch(stage)
 			 instance_create_layer(obj_player.x,obj_player.y,"Trigger",obj_trigger_atk5)
 			//instance_create_layer(lengthdir_x(point_distance(x,y,obj_player.x,obj_player.y),point_direction(x,y,obj_player.x,obj_player.y)),lengthdir_y(point_distance(x,y,obj_player.x,obj_player.y),point_direction(x,y,obj_player.x,obj_player.y)),"Trigger",obj_trigger_atk5)
 			check_player_pos = false;
+			
+			audio_sound_pitch(snd_charge,random_range(0.5,1.5));
+			audio_play_sound(snd_charge,1,false);
+			
 		}
 	
 		with(obj_boss) move(40,point_direction(x,y,obj_trigger_atk5.x, obj_trigger_atk5.y));
