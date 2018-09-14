@@ -55,11 +55,12 @@ if(obj_player.control_amount != 0)
             
             
         } 
-        else
-        {
-            fire_key = mbutton.nothing;
-        }
-    }
+	
+	}
+	if (!obj_player.key_fire) && (!obj_player.key_fire_alt)
+	{
+		fire_key = mbutton.nothing;
+	}
 }
 
 
@@ -68,23 +69,6 @@ if(fire_key == mbutton.left) or (gamepad_button_check(0,gp_shoulderrb)) //Charge
     firing_delay_rapid = firing_delay_rapid_max;
     firing_delay--;
     obj_player.walkspd = 3;
-    
-    if(fire_key == mbutton.nothing)
-    {
-        if (firing_delay <= 0)
-        {
-            with(instance_create_layer(x + lengthdir_x(70,image_angle),y + lengthdir_y(40,image_angle),"Bullets",obj_arrow))
-            		{
-            			speed = 25;
-            			direction = other.image_angle;
-            			image_angle = direction;
-            		}
-    				sprite_index = spr_bow_fire;
-    				firing_delay = firing_delay_max;
-        }
-    }
-    else obj_player.walkspd = 5;
-
 }
 else
 {
@@ -102,10 +86,28 @@ else
 					other.reload_mag--;
         		}  
         		sprite_index = spr_bow_fire;
-        		firing_delay = firing_delay_rapid_max;
+        		firing_delay_rapid = firing_delay_rapid_max;
         }
     }
 }
+
+//Releasing charge
+ if(fire_key == mbutton.nothing)
+    {
+        if (firing_delay <= 0)
+        {
+            with(instance_create_layer(x + lengthdir_x(70,image_angle),y + lengthdir_y(40,image_angle),"Bullets",obj_arrow))
+            		{
+            			speed = 25;
+            			direction = other.image_angle;
+            			image_angle = direction;
+            		}
+    				sprite_index = spr_bow_fire;
+    				firing_delay = firing_delay_max;
+        }
+		else  firing_delay = firing_delay_max;
+    }
+    else obj_player.walkspd = 5;
 #region old firing system
 //V1.0
     /*
