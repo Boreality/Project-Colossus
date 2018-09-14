@@ -17,10 +17,11 @@ if(!global.death)
 	//draw_healthbar(boss_hp_bar_x1,boss_hp_bar_y1,boss_hp_bar_x2,boss_hp_bar_y2,obj_boss.hp,c_gray,c_red,c_red,-1,true,false);
 	
 }
+var hp_bar_amount = approach(obj_boss.hp_percentile,hp_bar_amount, 0.2);
 
 if((global.death) && (room != rm_death)) or (!global.death)
 	{
 		
 		draw_set_alpha(0.4)
-		draw_healthbar(global.boss_hp_bar_x1,global.boss_hp_bar_y1,global.boss_hp_bar_x2,global.boss_hp_bar_y2 ,obj_boss.hp_percentile * 100,c_dkgray,c_red,c_red,-1,true,false);
+		draw_healthbar(global.boss_hp_bar_x1,global.boss_hp_bar_y1,global.boss_hp_bar_x2,global.boss_hp_bar_y2 ,hp_bar_amount * 100,c_dkgray,c_red,c_red,-1,true,false);
 	}

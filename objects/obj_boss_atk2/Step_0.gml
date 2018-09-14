@@ -14,8 +14,9 @@ if(firing_delay <= 0)
 	repeat (18) Fire20DegreesSmall();
 	firing_delay = firing_delay_max;
 	
-	audio_sound_pitch(snd_circleattack,random_range(0.5,1.5));
-	audio_play_sound(snd_circleattack,1,false);
+	audio_play_random_pitch(snd_circleattack,1);
+// 	audio_sound_pitch(snd_circleattack,random_range(0.5,1.5));
+// 	audio_play_sound(snd_circleattack,1,false);
 	
 }
 direction = 10;
@@ -24,8 +25,9 @@ if(firing_delay_sep <= 0)
 	repeat (18) Fire20DegreesSmall();
 	firing_delay_sep = firing_delay_max_sep;
 	
-	audio_sound_pitch(snd_circleattack,random_range(0.5,1.5));
-	audio_play_sound(snd_circleattack,1,false);
+		audio_play_random_pitch(snd_circleattack,1);
+// 	audio_sound_pitch(snd_circleattack,random_range(0.5,1.5));
+// 	audio_play_sound(snd_circleattack,1,false);
 	
 }
  

@@ -60,5 +60,6 @@ global.death = false;
 
 death_check = true;
 
-audio_sound_pitch(snd_revive,random_range(0.5,1.5));
-audio_play_sound(snd_revive,1,false);
+audio_play_random_pitch(snd_revive,1);
+// audio_sound_pitch(snd_revive,random_range(0.5,1.5));
+// audio_play_sound(snd_revive,1,false);

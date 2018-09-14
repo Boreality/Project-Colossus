@@ -3093,6 +3093,14 @@
                 "resourcePath": "scripts\\__health\\__health.yy",
                 "resourceType": "GMScript"
             }
+        },
+        {
+            "Key": "27139A51-61F4-1D5A-E4AB-CBD7B4BE757E",
+            "Value": {
+                "id": "BC2F63C7-5E91-F8E5-B16E-2F9684DF53A5",
+                "resourcePath": "scripts\\audio_play_random_pitch\\audio_play_random_pitch.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "script_order": [
