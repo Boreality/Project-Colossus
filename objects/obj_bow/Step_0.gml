@@ -1,35 +1,17 @@
-/// @desc
-//Want system where player has to hold in bow, and slow down(disadvantaged state to fire)
+
+
+
+x = obj_player.x;
+y = obj_player.y + 7;
+	
+	
 if(obj_player.control_amount != 0)
 {
-	//key_charge = keyboard_check_pressed(ord("1"));
-	//if(obj_player.control_amount == 1)
-	//{
-		//key_rapid = keyboard_check_pressed(ord("2"));
-	//}
-	x = obj_player.x;
-	y = obj_player.y + 7;
-
-
-	if((obj_player.key_fire) or (gamepad_button_check(0,gp_padu))) state = state.charge;
-	if((obj_player.key_fire_alt) or (gamepad_button_check(0,gp_padd))) and (state != state.reload) state = state.rapid;
-	//with(obj_boss_atkfinal)
-	//{
-	//	if(status != status.chargeslow)
-	//	{
-	//		with(other) if((obj_player.key_fire_alt) or (gamepad_button_check(0,gp_padd))) and (state != state.reload) state = state.rapid;
-	//	}
-	//	else
-	//	{
-	//		with(other) if((obj_player.key_fire_alt) or (gamepad_button_check(0,gp_padd)))	state = state.charge;
-	//	}
-	//}
-
+#region //controller stuff
 	if(!obj_player.controller)
 	{
 		//put stuff here that only works with keyboard/mouse	
 		image_angle = point_direction(x,y,mouse_x,mouse_y);
-
 	}
 	else
 	{
@@ -42,8 +24,8 @@ if(obj_player.control_amount != 0)
 		
 		}
 		//General left analoge movement so its in the same place
-}
-	
+    }
+	#endregion
 	
 }
 
@@ -56,7 +38,77 @@ else image_yscale = 1;
 //Firing System
 
 
+//Taking Input
+
+if(obj_player.control_amount != 0)
+{
+    if(obj_player.key_fire)
+    {
+        fire_key = mbutton.left;
+    }
+    else
+    {
+       if(obj_player.key_fire_alt)
+        {
+            if(ifnotchargeslow(true)) fire_key = mbutton.right;
+            if(ifchargeslow(true)) fire_key = mbutton.left;
+            
+            
+        } 
+        else
+        {
+            fire_key = mbutton.nothing;
+        }
+    }
+}
+
+
+if(fire_key == mbutton.left) or (gamepad_button_check(0,gp_shoulderrb)) //Charge
+{
+    firing_delay_rapid = firing_delay_rapid_max;
+    firing_delay--;
+    obj_player.walkspd = 3;
     
+    if(fire_key == mbutton.nothing)
+    {
+        if (firing_delay <= 0)
+        {
+            with(instance_create_layer(x + lengthdir_x(70,image_angle),y + lengthdir_y(40,image_angle),"Bullets",obj_arrow))
+            		{
+            			speed = 25;
+            			direction = other.image_angle;
+            			image_angle = direction;
+            		}
+    				sprite_index = spr_bow_fire;
+    				firing_delay = firing_delay_max;
+        }
+    }
+    else obj_player.walkspd = 5;
+
+}
+else
+{
+    if(fire_key == mbutton.right) or (gamepad_button_check(0,gp_shoulderrb)) //Rapid
+    {
+        firing_delay = firing_delay_max;
+        firing_delay_rapid--;
+        if(firing_delay_rapid <= 0)
+        {
+            with(instance_create_layer(x + lengthdir_x(70,image_angle),y + lengthdir_y(40,image_angle),"Bullets",obj_arrow_rapid))
+	        	{
+	       			speed = 15;
+	       			direction = other.image_angle + random_range(-bullet_offset,bullet_offset);
+	       			image_angle = direction;
+					other.reload_mag--;
+        		}  
+        		sprite_index = spr_bow_fire;
+        		firing_delay = firing_delay_rapid_max;
+        }
+    }
+}
+#region old firing system
+//V1.0
+    /*
 	//Charge
         if((ifnotchargeslow(obj_player.key_fire) or (gamepad_button_check(0,gp_shoulderrb)))) or (ifchargeslow((mouse_check_button(mb_left)) or (ifchargeslow(mouse_check_button(mb_right)))))
         {
@@ -122,21 +174,7 @@ else image_yscale = 1;
         }
         
     }
-    
-    
-   //Reload
-   if(reload_mag <= 0)
-   {
-		reload_timer--;
-		//reload animation here
-		if(reload_timer <= 0) 
-		{
-			reload_timer = reload_timer_max;
-			reload_mag = reload_mag_max;
-			//state = state.rapid;
-		
-		}
-   }
-
+    */
+#endregion
 
 firing_delay_percetile =( firing_delay / firing_delay_max) * 100;

@@ -1,4 +1,4 @@
-/// @desc
+/// @desc Variableeeeees
 
 firing_delay_max = 1.6 * room_speed;
 firing_delay = firing_delay_max;
@@ -28,3 +28,9 @@ enum state
 }
 state = state.charge;
 
+enum mbutton {
+    left,
+    right,
+    nothing
+}
+fire_key = 10;
