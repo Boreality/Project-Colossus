@@ -15,10 +15,7 @@ switch(status)
 		{
 			if(place_meeting(x,y,obj_player))
 			{
-				with(other)
-				{
-					status = status.retreat;
-				}
+				with(other) status = status.retreat;
 				instance_destroy();
 			}
 		}

@@ -6,7 +6,6 @@
 	{
 		
 		
-		
 		if(hp >= (round((hp_max/num_of_stages)*(num_of_stages - 1))))	//Health divided by number of stages, have amount of health needed for change. Times to be the desired amount (if stages = 4, should be 75)
 		{
 			if(check0)
