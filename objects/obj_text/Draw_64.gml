@@ -6,7 +6,21 @@ if(!global.death)
 	draw_set_alpha(1)
 	draw_set_font(fnt_hp);
 
-	draw_text(10,5, "Hp: " + string(obj_player.hp));
+	var xlocation = 150;
+	var ylocation = 100;
+	var imagescale = 4;
+	draw_sprite_ext(spr_gui,0,xlocation,ylocation,imagescale,imagescale,0,-1,1);
+	
+	
+	for(var i = 1; i <= obj_player.hp; i++)
+	{
+		draw_sprite_ext(spr_gui_life,0,xlocation + (90 * i), ylocation -30,6,6,0,-1,1);	
+	}
+	
+	
+	draw_healthbar(xlocation * 1.7,ylocation + 80,xlocation * 4, ylocation + 120,obj_player.stamina, c_black, c_red, c_green, 0, true, false);
+	//iframe true when player hit, 
+	//draw_text(10,5, "Hp: " + string(obj_player.hp));
 
 	draw_set_font(fnt_debug);
 
@@ -17,6 +31,10 @@ if(!global.death)
 	//draw_healthbar(boss_hp_bar_x1,boss_hp_bar_y1,boss_hp_bar_x2,boss_hp_bar_y2,obj_boss.hp,c_gray,c_red,c_red,-1,true,false);
 	
 }
+
+
+
+
 
 if((global.death) && (room != rm_death)) or (!global.death)
 	{

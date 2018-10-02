@@ -8,6 +8,10 @@ hp_timer_max = 2 * room_speed;
 hp_timer = hp_timer_max;
 #endregion
 
+
+walk_spd_max =5;
+walk_spd = walk_spd_max;
+
 #region Iframes
 iFrame_timer_max = 1.5 * room_speed;
 iFrame_timer = iFrame_timer_max;

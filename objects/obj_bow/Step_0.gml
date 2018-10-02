@@ -61,7 +61,8 @@ if(fire_key == mbutton.left) or (gamepad_button_check(0,gp_shoulderrb)) //Charge
 {
     firing_delay_rapid = firing_delay_rapid_max;
     firing_delay--;
-    obj_player.walkspd = 3;
+	charge_active = true;
+    obj_player.walk_spd = 4;
 }
 else
 {
@@ -82,6 +83,7 @@ else
         		firing_delay_rapid = firing_delay_rapid_max;
         }
     }
+	charge_active = false;
 }
 
 //Releasing charge

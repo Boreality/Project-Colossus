@@ -2,13 +2,9 @@
 draw_self();
 if(!global.death)
 {
-
 	draw_self();
-	draw_healthbar(x -30,y - 50,x + 30, y - 30,obj_bow.firing_delay_percetile, c_black, c_red, c_silver, 0, true, true);
-	draw_healthbar(x -30,y - 100,x + 30, y - 70,id.stamina, c_black, c_red, c_green, 0, true, true);
-
-
-
+	if(obj_bow.charge_active) draw_healthbar(x -30,y - 50,x + 30, y - 30,obj_bow.firing_delay_percetile, c_black, c_red, c_silver, 0, true, true);
+	
 
 	if(iFrame)
 	{
@@ -19,16 +15,13 @@ if(!global.death)
 			shader_reset();
 			flash--;
 		}
-	
-	
+		
 		if(dodge_happening)
 		{
 			shader_set(sh_aqua);
 			draw_self();
 			shader_reset();
-		
 		}
-	
 	}
 }
 

@@ -13,4 +13,7 @@ hp_boss_prev = 0;
 reduction = false;
 hp_boss_temp = 0;
 
+
+hp_calc = obj_player.hp;
+
 check = true;

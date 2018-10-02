@@ -14,7 +14,7 @@ reload_mag = reload_mag_max;
 
 check = true;
 
-
+charge_active = false;
 
 
 controller_angle = 0;
